@@ -4,6 +4,8 @@
  */
 await import("./src/env.js");
 
+const { withPlaiceholder } = require("@plaiceholder/next");
+
 /** @type {import("next").NextConfig} */
 const config = {};
 
