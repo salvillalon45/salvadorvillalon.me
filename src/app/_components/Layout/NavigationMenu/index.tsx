@@ -2,7 +2,6 @@ import cn from "utils/cn";
 import Wrapper from "../../Wrapper";
 import Link from "next/link";
 import Image from "next/image";
-import Links from "./ClientLinks/Links";
 import ClientLinks from "./ClientLinks";
 
 function NavigationMenu() {

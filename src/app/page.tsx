@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { LatestPost } from "~/app/_components/post";
 import { api, HydrateClient } from "~/trpc/server";
+import HomePage from "./(home)/HomePage";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -10,7 +11,9 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className=""></main>
+      <main className="homePageMain">
+        <HomePage />
+      </main>
     </HydrateClient>
   );
 }

@@ -68,6 +68,7 @@ export default function RootLayout({
       <body
         className={cn(
           "rootLayout bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200",
+          "flex min-h-screen flex-col",
         )}
       >
         <TRPCReactProvider>

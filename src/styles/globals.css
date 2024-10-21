@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+    On the subject of making the footer stick to the bottom
+    on the body we did the following:
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    - `display: flex` and `flex-direction: column` create a flex container with a vertical layout.
+
+    Then there are two approaches to make the footer stick to the bottom:
+    - `margin-top: auto`
+
+    - main {flex-grow: 1;}
+        - on the article (main content) tells it to grow and take up any available space in the flex container.
+    - margin-top: auto; 
+        - `auto` margins absorb any extra space in the flex container. By setting `margin-top: auto` on the footer, you're telling it to take up all the available space above it, effectively pushing it to the bottom.
+*/
+main {
+  flex-grow: 1;
+}
