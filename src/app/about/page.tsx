@@ -1,5 +1,11 @@
+import AboutPage from "./AboutPage";
+
 function About() {
-  return <div>About</div>;
+  return (
+    <main className="aboutPageMain">
+      <AboutPage />
+    </main>
+  );
 }
 
 export default About;
