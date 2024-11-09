@@ -1,8 +1,8 @@
-import cn from "utils/cn";
 import Wrapper from "../../Wrapper";
 import Link from "next/link";
 import Image from "next/image";
 import ClientLinks from "./ClientLinks";
+import { cn } from "~/lib/cn";
 
 function NavigationMenu() {
   return (

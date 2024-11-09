@@ -42,6 +42,14 @@ function Intro() {
           Outside of work, I am out in the wild Hiking, at the tennis courts,
           running in the fields and citys, coding, and writing tech articles.
         </p>
+        {/* <p>Want to learn more about me?  
+          <a
+            href={href}
+            aria-label={ariaLabel}
+            className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
+          >
+            {label}
+          </a></p> */}
       </div>
     </section>
   );
