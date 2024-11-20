@@ -95,6 +95,11 @@ const plaiceholderConfig = withPlaiceholder({
       destination: "https://github.com/salvillalon45",
       permanent: true,
     },
+    {
+      source: "/follow/freecodecamp",
+      destination: "https://www.freecodecamp.org/news/author/salvadorvillalon/",
+      permanent: true,
+    },
   ],
   headers: async () => [
     {

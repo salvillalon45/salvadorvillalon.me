@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import cn from "utils/cn";
 import Layout from "./_components/Layout";
+import { cn } from "~/lib/cn";
 
 // export const metadata: Metadata = {
 //   title: "Create T3 App",
@@ -13,6 +13,7 @@ import Layout from "./_components/Layout";
 //   icons: [{ rel: "icon", url: "/favicon.ico" }],
 // };
 
+// TODO: Add metadata
 export const metadata: Metadata = {
   title: {
     absolute: "Salvador Villalon – Best Engineer",

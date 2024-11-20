@@ -1,11 +1,11 @@
-import cn from "utils/cn";
+import { cn } from "~/lib/cn";
 
-interface Props {
+interface WrapperProps {
   children: Array<JSX.Element> | JSX.Element;
   isCompressed?: boolean;
 }
 
-function Wrapper(props: Props) {
+function Wrapper(props: WrapperProps) {
   return (
     <div
       className={cn(

@@ -1,3 +1,4 @@
+import DividerLine from "../_components/DividerLine";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ function HomePage() {
                 <h1 className="text-3xl font-bold">
                   Hey, I&apos;m Salvador Villalon 👨🏽‍💻 👋🏽
                 </h1>
+                <DividerLine />
                 <p className="sm:max-w-md">
                   I&apos;m a Software Engineer based in Calexico, CA. I{" "}
                   <a
@@ -35,8 +37,6 @@ function HomePage() {
                   and build unique solutions.
                 </p>
                 <p className="sm:max-w-md">
-                  {/* I love working in-between product, engineering and developer
-                                  experience, currently at Productable. */}
                   I use Full Stack expertise, optimism, and agile learning to
                   listen to the pain points of users and cooperate with my team
                   to innovate digital experiences. Currently working at {""}
