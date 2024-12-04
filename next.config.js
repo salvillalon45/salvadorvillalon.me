@@ -48,6 +48,7 @@ await import("./src/env.js");
 // export default config;
 import withPlaiceholder from "@plaiceholder/next";
 import withPWA from "next-pwa";
+import createMDX from '@next/mdx'
 
 const cspHeader = `
     default-src 'self';
@@ -127,10 +128,21 @@ const pwaConfig = withPWA({
   dest: "public",
 });
 
+
+// MXD Configuration
+const nextConfig = {
+  // Configure `pageExtensions` to include markdown and MDX files
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+}
+
+const withMDX = createMDX({})
+const mdxConfig = withMDX(nextConfig)
+
 /** @type {import("next").NextConfig} */
 const config = {
   ...plaiceholderConfig,
   ...pwaConfig,
+  ...mdxConfig
 };
 
 export default config;

@@ -15,7 +15,7 @@ function ExperienceSection({ experienceData }: ExperienceSectionProps) {
             return (
                 <>
                     <div className='flex items-start gap-x-3'>
-                        <div className='mt-2 h-1.5 w-1.5 rounded-full bg-gray-200 flex-shrink-0'></div>
+                        {/* <div className='mt-2 h-1.5 w-1.5 rounded-full bg-gray-200 flex-shrink-0'></div> */}
 
                         <ExperienceItem
                             roleTitle={role_title}

@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import typography from "@tailwindcss/typography";
 
 export default {
 	content: ["./src/**/*.{js,ts,jsx,tsx,md}"],
@@ -88,5 +87,5 @@ export default {
 			}
 		}
 	},
-	plugins: [typography, require("tailwindcss-animate")],
+	plugins: [require('@tailwindcss/typography'), require("tailwindcss-animate")],
 } satisfies Config;
