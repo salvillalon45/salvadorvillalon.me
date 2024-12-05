@@ -1,7 +1,7 @@
 import { cn } from "~/lib/cn";
 
 interface WrapperProps {
-  children: Array<JSX.Element> | JSX.Element;
+  children: Array<JSX.Element> | JSX.Element | React.ReactNode;
   isCompressed?: boolean;
 }
 
