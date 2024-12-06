@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Wrapper from "~/app/_components/Wrapper";
 import DividerLine from "~/app/_components/DividerLine";
 import { MarkdownRenderer } from "../components/MarkdownRenderer";
+import { metadata } from "~/app/layout";
 
 interface SlugProps {
     params: { slug: string; }

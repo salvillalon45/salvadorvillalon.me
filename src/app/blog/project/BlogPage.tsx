@@ -3,8 +3,7 @@ import Wrapper from "~/app/_components/Wrapper";
 import { fetchBlogs, fetchMedia } from "~/lib/api/blog";
 import ContentSection from "./components/ContentSection";
 
-async function BlogPage() {
-  // TODO: Will need to use next.mdx for blog posts
+function BlogPage() {
   const blogs = fetchBlogs();
   const media = fetchMedia();
 
@@ -23,12 +22,7 @@ async function BlogPage() {
             <h2 className='text-xl font-bold'>Blogs</h2>
             {blogs.map((blog) => {
               return (
-                <ContentSection
-                  key={blog.link}
-                  link={blog.link}
-                  datePublished={blog.datePublished}
-                  title={blog.title}
-                />
+                <ContentSection key={blog.title} {...blog} />
               );
             })}
           </div>
@@ -38,10 +32,8 @@ async function BlogPage() {
             {media.map((mediaItem) => {
               return (
                 <ContentSection
-                  key={mediaItem.link}
-                  link={mediaItem.link}
-                  datePublished={mediaItem.datePublished}
-                  title={mediaItem.title}
+                  key={mediaItem.title}
+                  {...mediaItem}
                 />
               );
             })}

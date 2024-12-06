@@ -8,7 +8,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import { highlight } from 'sugar-high'
 
 // Reuse your existing custom components
@@ -48,7 +48,13 @@ function CustomLink(props: React.ComponentPropsWithoutRef<'a'>) {
 // Custom components for react-markdown
 const components = {
     a: CustomLink,
-    // img: RoundedImage,
+    img: (props) => (
+        <Image
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            {...(props as ImageProps)}
+        />
+    ),
     // code: Code,
     h2: (props: React.ComponentPropsWithoutRef<'h2'>) => (
         <h2 className="text-xl font-bold" {...props} />

@@ -1,30 +1,33 @@
 interface ContentSectionProps {
     link: string;
-    datePublished: string;
+    slug: string;
+    publishedAt: string;
     title: string;
 }
 
-function ContentSection(blog: ContentSectionProps) {
+function ContentSection({ link, slug, publishedAt, title }: ContentSectionProps) {
+    const anchorNavigation = link ? link : `blog/${slug}`;
+
     return (
-        <section key={blog.link}>
+        <section key={title}>
             <ul className="grid grid-flow-row gap-3">
                 <li
-                    key={blog.link}
+                    key={title}
                     className="flex flex-col-reverse sm:flex-row sm:gap-10 gap-4 px-3 py-2 -mx-3 rounded-lg transition-all focus-within:bg-neutral-100 hover:bg-neutral-100 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900"
                 >
                     <time
                         className="opacity-60 sm:w-20"
-                        dateTime={blog.datePublished}
-                        aria-label={`Written ${blog.datePublished}`}
+                        dateTime={publishedAt}
+                        aria-label={`Written ${publishedAt}`}
                     >
-                        {blog.datePublished}
+                        {publishedAt}
                     </time>
 
                     <a
-                        href={blog.link}
+                        href={anchorNavigation}
                         className=""
                     >
-                        <p className="font-medium">{blog.title}</p>
+                        <p className="font-medium">{title}</p>
                     </a>
                 </li>
             </ul>
