@@ -5,6 +5,7 @@ import Wrapper from "~/app/_components/Wrapper";
 import DividerLine from "~/app/_components/DividerLine";
 import { MarkdownRenderer } from "../components/MarkdownRenderer";
 import { metadata } from "~/app/layout";
+import './AboutSal.css';
 
 interface SlugProps {
     params: { slug: string; }

@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -27,34 +24,9 @@ function CustomLink(props: React.ComponentPropsWithoutRef<'a'>) {
     return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-// function RoundedImage(props: React.ComponentPropsWithoutRef<typeof Image>) {
-//     return <Image className="rounded-lg" {...props} alt={props.alt} />
-// }
-
-// function Code({ inline, className, children, ...props }: any) {
-//     const match = /language-(\w+)/.exec(className || '')
-//     const codeHTML = highlight(String(children).replace(/\n$/, ''))
-//     return !inline && match ? (
-//         <pre className={className} {...props}>
-//             <code dangerouslySetInnerHTML={{ __html: codeHTML }} />
-//         </pre>
-//     ) : (
-//         <code className={className} {...props}>
-//             {children}
-//         </code>
-//     )
-// }
-
 // Custom components for react-markdown
 const components = {
     a: CustomLink,
-    img: (props) => (
-        <Image
-            sizes="100vw"
-            style={{ width: '100%', height: 'auto' }}
-            {...(props as ImageProps)}
-        />
-    ),
     // code: Code,
     h2: (props: React.ComponentPropsWithoutRef<'h2'>) => (
         <h2 className="text-xl font-bold" {...props} />
