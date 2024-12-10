@@ -5,10 +5,7 @@ import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import Link from 'next/link'
-import Image, { ImageProps } from 'next/image'
-import { highlight } from 'sugar-high'
 
-// Reuse your existing custom components
 function CustomLink(props: React.ComponentPropsWithoutRef<'a'>) {
     const href = props.href
     if (href?.startsWith('/')) {
@@ -24,7 +21,6 @@ function CustomLink(props: React.ComponentPropsWithoutRef<'a'>) {
     return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
-// Custom components for react-markdown
 const components = {
     a: CustomLink,
     // code: Code,
