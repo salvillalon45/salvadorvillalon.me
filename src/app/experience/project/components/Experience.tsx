@@ -1,8 +1,6 @@
 import { SectionType } from "~/lib/types/types";
-import EducationSection from "./sections/EducationSection";
-import ProfessionalExperienceSection from "./sections/ProfessionalExperienceSection";
-import InternshipSection from "./sections/InternshipSection";
-import TeachingSection from "./sections/TeachingSection";
+import IndividualExperienceSection from "./sections/IndividualExperienceSection";
+import { educationData, internshipExperienceData, professionalExperienceData, teachingExperienceData } from "~/lib/data/experienceData";
 
 interface ExperienceProps {
     currentSection: SectionType;
@@ -12,16 +10,31 @@ function Experience({ currentSection }: ExperienceProps) {
     function showExperienceContent() {
         switch (currentSection) {
             case SectionType.FULL_TIME:
-                return <ProfessionalExperienceSection />;
+                return <IndividualExperienceSection
+                    id='professional-experience-section'
+                    heading='Profesional Experience'
+                    data={professionalExperienceData}
+                />;
             case SectionType.INTERNSHIPS:
-                return <InternshipSection />;
+                return <IndividualExperienceSection
+                    id='internships-experience-section'
+                    heading='Internships'
+                    data={internshipExperienceData}
+                />;
             case SectionType.TEACHING:
-                return <TeachingSection />;
+                return <IndividualExperienceSection
+                    id='teaching-experience-section'
+                    heading='Teaching'
+                    data={teachingExperienceData}
+                />;
             case SectionType.CURRENT:
-                // return <CurrentlyDoingSection />;
                 return <p>Currently Doing</p>;
             case SectionType.EDUCATION:
-                return <EducationSection />;
+                return <IndividualExperienceSection
+                    id='education-experience-section'
+                    heading='Education'
+                    data={educationData}
+                />;
             default:
                 return (
                     <p className='text-center'>

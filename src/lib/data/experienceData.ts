@@ -1,4 +1,4 @@
-const fullTimeExperienceData = [
+const professionalExperienceData = [
     {
         role_title: 'Advanced Application Engineering Senior Analyst',
         organization: 'Accenture',
@@ -121,7 +121,7 @@ const educationData = [
 ];
 
 export {
-    fullTimeExperienceData,
+    professionalExperienceData,
     internshipExperienceData,
     teachingExperienceData,
     currentlyDoingExperienceData,

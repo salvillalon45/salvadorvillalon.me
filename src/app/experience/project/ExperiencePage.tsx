@@ -27,8 +27,6 @@ function ExperiencePage() {
                         <DividerLine />
                     </div>
 
-                    {currentSection}
-
                     <div className="grid gap-4">
                         <Experience currentSection={currentSection} />
                     </div>

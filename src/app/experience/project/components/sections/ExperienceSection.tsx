@@ -1,5 +1,5 @@
 import DividerLine from "~/app/_components/DividerLine";
-import { ExperienceData } from "~/lib/types/types";
+import { type ExperienceData } from "~/lib/types/types";
 import ExperienceItem from "../ExperienceItem";
 
 interface ExperienceSectionProps {
