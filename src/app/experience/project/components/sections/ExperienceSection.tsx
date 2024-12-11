@@ -3,37 +3,55 @@ import { type ExperienceData } from "~/lib/types/types";
 import ExperienceItem from "../ExperienceItem";
 
 interface ExperienceSectionProps {
-    experienceData: Array<ExperienceData>;
+    experienceData: {
+        organization: string;
+        organization_link: string;
+        positions: {
+            title: string;
+            date: string;
+            description: string;
+            skills: string;
+        }[];
+    }[];
 }
 
 function ExperienceSection({ experienceData }: ExperienceSectionProps) {
-    return experienceData.map(
-        (
-            { org_link, organization, role_title, description, date, skills },
-            index
-        ) => {
-            return (
-                <>
-                    <div className='flex items-start gap-x-3'>
-                        {/* <div className='mt-2 h-1.5 w-1.5 rounded-full bg-gray-200 flex-shrink-0'></div> */}
+    return experienceData.map(({ organization, organization_link: orgLink, positions }, index) => {
+        return (
+            <>
+                <div className='flex items-start gap-x-3'>
+                    <p>
+                        <a href={orgLink}>
+                            <b>{organization}</b>
+                        </a>
+                    </p>
+                </div>
 
-                        <ExperienceItem
-                            roleTitle={role_title}
-                            organization={organization}
-                            date={date}
-                            orgLink={org_link}
-                            description={description}
-                            skills={skills}
-                        />
-                    </div>
+                {
+                    positions.map(
+                        (
+                            { title, date, description, skills },
+                        ) => {
+                            return (
+                                <div className='flex items-start gap-x-3'>
+                                    <ExperienceItem
+                                        title={title}
+                                        date={date}
+                                        description={description}
+                                        skills={skills}
+                                    />
+                                </div>
+                            );
+                        }
+                    )
+                }
 
-                    {index + 1 === experienceData.length ? null : (
-                        <DividerLine style='mb-2 mt-2' />
-                    )}
-                </>
-            );
-        }
-    );
+                {index + 1 === experienceData.length ? null : (
+                    <DividerLine style='mb-2 mt-2' />
+                )}
+            </>
+        );
+    })
 }
 
 export default ExperienceSection;

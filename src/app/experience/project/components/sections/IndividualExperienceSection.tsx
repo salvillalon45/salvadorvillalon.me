@@ -4,13 +4,15 @@ interface IndividualExperienceSectionProps {
     id: string;
     heading: string;
     data: {
-        role_title: string;
         organization: string;
-        date: string;
-        org_link: string;
-        description: string;
-        skills: string;
-    }[];
+        organization_link: string;
+        positions: {
+            title: string;
+            date: string;
+            description: string;
+            skills: string;
+        }[];
+    }[]
 }
 
 function IndividualExperienceSection({ id, heading, data }: IndividualExperienceSectionProps) {

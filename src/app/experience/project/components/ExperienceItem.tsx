@@ -1,31 +1,21 @@
 interface ExperienceItemProps {
-    roleTitle: string;
-    organization: string;
+    title: string;
     date: string;
-    description: string;
-    orgLink: string;
+    description: string
     skills: string;
 };
 
 function ExperienceItem({
-    roleTitle,
-    organization,
+    title,
     date,
     description,
-    orgLink,
     skills
 }: ExperienceItemProps) {
     return (
         <div className='grid gap-2'>
             <div className='flex flex-col gap-4'>
-                <p>
-                    <a href={orgLink}>
-                        <b>{organization}</b>
-                    </a>
-
-                </p>
-                <div className='flex'>
-                    <p>{roleTitle}</p>
+                <div className='flex gap-4'>
+                    <p>{title}</p>
                     <p>{date}</p>
                 </div>
             </div>
