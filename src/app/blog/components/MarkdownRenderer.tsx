@@ -23,7 +23,6 @@ function CustomLink(props: React.ComponentPropsWithoutRef<'a'>) {
 
 const components = {
     a: CustomLink,
-    // code: Code,
     h2: (props: React.ComponentPropsWithoutRef<'h2'>) => (
         <h2 className="text-xl font-bold" {...props} />
     ),

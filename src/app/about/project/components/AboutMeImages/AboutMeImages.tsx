@@ -2,21 +2,21 @@ import ImageCard from "./ImageCard";
 
 function AboutMeImages() {
   return (
-    <section className="aboutMeImagesSection">
+    <section className="about-me-images-section">
       <div className="flex flex-wrap justify-center gap-4">
-        <ImageCard 
+        <ImageCard
           src='/about/hike.jpg'
           alt='salvador hiking'
           footerLabel="Into the wild while hiking!"
         />
 
-        <ImageCard 
+        <ImageCard
           src='/about/snow.jpg'
           alt='salvador snow'
           footerLabel="Recently tried snowboarding!"
         />
 
-        <ImageCard 
+        <ImageCard
           src='/about/run.jpg'
           alt='salvador running'
           footerLabel="Voy Volando!"

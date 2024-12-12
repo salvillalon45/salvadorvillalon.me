@@ -18,10 +18,11 @@ interface ExperienceSectionProps {
 function ExperienceSection({ experienceData }: ExperienceSectionProps) {
     return experienceData.map(({ organization, organization_link: orgLink, positions }, index) => {
         return (
+
             <>
-                <div className='flex items-start gap-x-3'>
+                <div>
                     <p>
-                        <a href={orgLink}>
+                        <a className='underline' href={orgLink}>
                             <b>{organization}</b>
                         </a>
                     </p>
@@ -33,7 +34,7 @@ function ExperienceSection({ experienceData }: ExperienceSectionProps) {
                             { title, date, description, skills },
                         ) => {
                             return (
-                                <div className='flex items-start gap-x-3'>
+                                <div key={title} className='flex items-start gap-x-3'>
                                     <ExperienceItem
                                         title={title}
                                         date={date}
@@ -46,9 +47,11 @@ function ExperienceSection({ experienceData }: ExperienceSectionProps) {
                     )
                 }
 
-                {index + 1 === experienceData.length ? null : (
-                    <DividerLine style='mb-2 mt-2' />
-                )}
+                {
+                    index + 1 === experienceData.length ? null : (
+                        <DividerLine style='mb-2 mt-2' />
+                    )
+                }
             </>
         );
     })

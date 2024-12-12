@@ -1,5 +1,18 @@
 const professionalExperienceData = [
     {
+        organization: 'Productable',
+        organization_link: 'https://www.accenture.com/us-en',
+        positions: [
+            {
+                title: 'Software Engineer',
+                date: 'Nov 2024 - Present',
+                description:
+                    'Collaborated with a team of three engineers to deliver key features for Productable’s innovation management platform, using React, TypeScript, Go, and AWS, ensuring timely and high-quality releases in a fast-paced environment.',
+                skills: 'TypeScript, React.js, AWS, Go'
+            },
+        ]
+    },
+    {
         organization: 'Accenture',
         organization_link: 'https://www.accenture.com/us-en',
         positions: [
@@ -19,19 +32,6 @@ const professionalExperienceData = [
             },
         ]
     },
-    {
-        organization: 'Productable',
-        organization_link: 'https://www.accenture.com/us-en',
-        positions: [
-            {
-                title: 'Software Engineer',
-                date: 'Nov 2024 - Present',
-                description:
-                    'Collaborated with a team of three engineers to deliver key features for Productable’s innovation management platform, using React, TypeScript, Go, and AWS, ensuring timely and high-quality releases in a fast-paced environment.',
-                skills: 'TypeScript, React.js, AWS, Go'
-            },
-        ]
-    }
 ];
 
 const internshipExperienceData = [
