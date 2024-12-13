@@ -2,13 +2,22 @@ import Wrapper from "../../_components/Wrapper";
 import Intro from "./components/Intro";
 import AboutMeImages from "./components/AboutMeImages";
 import Online from "./components/Online";
+import DividerLine from "~/app/_components/DividerLine";
+import Heading from "~/app/_components/Heading";
+import { HeadingSize } from "~/lib/types/types";
 
 function AboutPage() {
   return (
-    <section className="aboutPageSection my-12">
+    <section className="about-page-section my-12">
       <Wrapper>
         <div className="grid gap-12">
-          <h1 className="text-3xl font-bold">About Salvador Villalon</h1>
+          <div className='grid gap-4'>
+            <Heading
+              text="About Salvador Villalon"
+              size={HeadingSize.H1}
+            />
+            <DividerLine />
+          </div>
 
           <Intro />
 

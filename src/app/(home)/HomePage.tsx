@@ -1,6 +1,8 @@
+import { HeadingSize } from "~/lib/types/types";
 import DividerLine from "../_components/DividerLine";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
+import Heading from "../_components/Heading";
 
 function HomePage() {
   return (
@@ -10,10 +12,13 @@ function HomePage() {
           <div className="flex justify-between gap-8">
             <div>
               <div className="grid gap-4">
-                <h1 className="text-3xl font-bold">
-                  Hey, I&apos;m Salvador Villalon 👨🏽‍💻 👋🏽
-                </h1>
+                <Heading
+                  text="Hey, I&apos;m Salvador Villalon 👨🏽‍💻 👋🏽"
+                  size={HeadingSize.H1}
+                />
+
                 <DividerLine />
+
                 <p className="sm:max-w-md">
                   I&apos;m a Software Engineer based in Calexico, CA. I{" "}
                   <a

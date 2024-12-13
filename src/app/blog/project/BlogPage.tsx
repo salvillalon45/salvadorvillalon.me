@@ -2,6 +2,8 @@ import DividerLine from "~/app/_components/DividerLine";
 import Wrapper from "~/app/_components/Wrapper";
 import { fetchBlogs, fetchMedia } from "~/lib/api/blog";
 import ContentSection from "./components/ContentSection";
+import Heading from "~/app/_components/Heading";
+import { HeadingSize } from "~/lib/types/types";
 
 function BlogPage() {
   const blogs = fetchBlogs();
@@ -13,7 +15,10 @@ function BlogPage() {
         <div className="grid gap-12">
           {/* // TODO: Turn this into a reusable heading component */}
           <div className='grid gap-4'>
-            <h1 className="text-3xl font-bold">Blogs & Media</h1>
+            <Heading
+              text="Blogs & Media"
+              size={HeadingSize.H1}
+            />
             <DividerLine />
             <p>My writing and where I been online!</p>
           </div>

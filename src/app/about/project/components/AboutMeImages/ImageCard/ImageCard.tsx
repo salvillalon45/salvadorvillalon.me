@@ -8,21 +8,21 @@ interface ImageCardProps {
   footerLabel: string;
 }
 
-export default function ImageCard({src, alt, footerLabel} : ImageCardProps) {
+export default function ImageCard({ src, alt, footerLabel }: ImageCardProps) {
   return (
-    <Card className="overflow-hidden">
-      <CardContent className="p-0">
+    <Card className="overflow-hidden w-64">
+      <CardContent className="p-0 h-64 relative">
         <Image
           src={src}
           alt={alt}
-          className="h-[200px] w-full object-cover"
-          height={200}
-          width={200}
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          fill
         />
       </CardContent>
 
-      <CardFooter className="flex justify-center">
-        <p>{footerLabel}</p>
+      <CardFooter className="flex justify-center p-5">
+        <p className="text-sm text-center">{footerLabel}</p>
       </CardFooter>
     </Card>
   );

@@ -6,6 +6,8 @@ import DividerLine from "~/app/_components/DividerLine";
 import { MarkdownRenderer } from "../components/MarkdownRenderer";
 import { metadata } from "~/app/layout";
 import './AboutSal.css';
+import Heading from "~/app/_components/Heading";
+import { HeadingSize } from "~/lib/types/types";
 
 interface SlugProps {
     params: { slug: string; }
@@ -98,7 +100,10 @@ export default function BlogSlug({ params }: SlugProps) {
                 <div className="grid gap-12">
                     {/* // TODO: Turn this into a reusable heading component */}
                     <div className='grid gap-4'>
-                        <h1 className="text-3xl font-bold">{post.metadata.title}</h1>
+                        <Heading
+                            text={post.metadata.title}
+                            size={HeadingSize.H1}
+                        />
                         <DividerLine />
                         <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             {formatDate(post.metadata.publishedAt)}

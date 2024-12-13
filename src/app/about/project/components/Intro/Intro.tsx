@@ -1,6 +1,6 @@
 function Intro() {
   return (
-    <section className="introSection">
+    <section className="intro-section">
       <div className="grid gap-4">
         <p>
           <span className="font-bold italic">Hey! How we doing?</span> 👋. I am
@@ -39,17 +39,22 @@ function Intro() {
           California, Irvine{" "}
         </p>
         <p>
-          Outside of work, I am out in the wild Hiking, at the tennis courts,
-          running in the fields and citys, coding, and writing tech articles.
+          Outside of work, I am out in the wild hiking, at the tennis courts,
+          running in the fields and cities, coding, and writing tech articles.
         </p>
-        {/* <p>Want to learn more about me?  <a
-            href={href}
-            aria-label={ariaLabel}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
+
+        <div className='grid gap-4'>
+          <p>
+            Want to learn more about me?
+          </p>
+          <a
+            href="/blog/about-sal"
+            aria-label="Learn about my story"
+            className="max-w-fit bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
           >
-            {label}
-          </a> Learn about my story !
-            </p> */}
+            Learn about Sal
+          </a>
+        </div>
       </div>
     </section>
   );

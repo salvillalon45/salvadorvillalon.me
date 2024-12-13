@@ -5,7 +5,8 @@ import Wrapper from "~/app/_components/Wrapper";
 import ExperienceSelect from "./components/ExperienceSelect";
 import { useState } from "react";
 import Experience from "./components/Experience";
-import { SectionType } from "~/lib/types/types";
+import { HeadingSize, SectionType } from "~/lib/types/types";
+import Heading from "~/app/_components/Heading";
 
 function ExperiencePage() {
     const [currentSection, setCurrentSection] = useState(SectionType.CURRENT);
@@ -16,7 +17,10 @@ function ExperiencePage() {
                 <div className="grid gap-8">
                     {/* // TODO: Turn this into a reusable heading component */}
                     <div className='grid gap-4'>
-                        <h1 className="text-3xl font-bold">My Experience</h1>
+                        <Heading
+                            text="My Experience"
+                            size={HeadingSize.H1}
+                        />
                         <DividerLine />
                         <p>This is what I been doing throughout the years. Click the button below to view my experience!</p>
                         <ExperienceSelect

@@ -17,7 +17,7 @@ interface ExperienceSelectProps {
 function ExperienceSelect({ currentSection, setCurrentSection }: ExperienceSelectProps) {
     const experienceSections = [
         { label: 'Currently Doing', value: SectionType.CURRENT },
-        { label: 'Full-Time Experience', value: SectionType.FULL_TIME },
+        { label: 'Professional Experience', value: SectionType.FULL_TIME },
         { label: 'Internships', value: SectionType.INTERNSHIPS },
         { label: 'Teaching', value: SectionType.TEACHING },
         { label: 'Education', value: SectionType.EDUCATION },
@@ -25,7 +25,7 @@ function ExperienceSelect({ currentSection, setCurrentSection }: ExperienceSelec
 
     return (
         <Select value={currentSection} onValueChange={setCurrentSection}>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[218px]">
                 <SelectValue placeholder={currentSection} />
             </SelectTrigger>
 

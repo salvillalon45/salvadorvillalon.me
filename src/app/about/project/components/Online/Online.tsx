@@ -21,7 +21,7 @@ function Online() {
   ];
 
   return (
-    <section className="onlinePresenceSection">
+    <section className="online-presence-section grid gap-4">
       {/* // TODO: Turn this into a reusable heading 2 component */}
       <h2 className="text-xl font-bold">Find Me Online</h2>
 
