@@ -1,18 +1,9 @@
 import DividerLine from "~/app/_components/DividerLine";
-import { type ExperienceData } from "~/lib/types/types";
+import { type ExperiencesDataArray, } from "~/lib/types/types";
 import ExperienceItem from "../ExperienceItem";
 
 interface ExperienceSectionProps {
-    experienceData: {
-        organization: string;
-        organization_link: string;
-        positions: {
-            title: string;
-            date: string;
-            description: string;
-            skills: string;
-        }[];
-    }[];
+    experienceData: ExperiencesDataArray
 }
 
 function ExperienceSection({ experienceData }: ExperienceSectionProps) {
@@ -34,7 +25,7 @@ function ExperienceSection({ experienceData }: ExperienceSectionProps) {
                             { title, date, description, skills },
                         ) => {
                             return (
-                                <div key={title} className='flex items-start gap-x-3'>
+                                <div key={title}>
                                     <ExperienceItem
                                         title={title}
                                         date={date}

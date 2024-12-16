@@ -1,11 +1,13 @@
-export interface ExperienceData {
-    role_title: string;
+export type ExperiencesDataArray = Array<{
     organization: string;
-    date: string;
-    org_link: string;
-    description: string;
-    skills: string;
-}
+    organization_link: string;
+    positions: Array<{
+        title: string;
+        date: string;
+        description: string;
+        skills: string;
+    }>;
+}>
 
 export enum SectionType {
     FULL_TIME = 'FULL_TIME',

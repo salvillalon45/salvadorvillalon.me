@@ -1,25 +1,21 @@
+import { type ExperiencesDataArray, HeadingSize } from "~/lib/types/types";
 import ExperienceSection from "./ExperienceSection";
+import Heading from "~/app/_components/Heading";
 
 interface IndividualExperienceSectionProps {
     id: string;
     heading: string;
-    data: {
-        organization: string;
-        organization_link: string;
-        positions: {
-            title: string;
-            date: string;
-            description: string;
-            skills: string;
-        }[];
-    }[]
+    data: ExperiencesDataArray;
 }
 
 function IndividualExperienceSection({ id, heading, data }: IndividualExperienceSectionProps) {
     return (
         <section id={id} className='grid gap-4'>
             <div className='grid gap-6'>
-                <h2 className="text-xl font-bold">{heading}</h2>
+                <Heading
+                    text={heading}
+                    size={HeadingSize.H2}
+                />
 
                 <ExperienceSection experienceData={data} />
             </div>

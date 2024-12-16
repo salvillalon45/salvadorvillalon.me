@@ -1,3 +1,6 @@
+import Heading from "~/app/_components/Heading";
+import { HeadingSize } from "~/lib/types/types";
+
 function Online() {
   const onlinePresenceLinks = [
     {
@@ -22,8 +25,10 @@ function Online() {
 
   return (
     <section className="online-presence-section grid gap-4">
-      {/* // TODO: Turn this into a reusable heading 2 component */}
-      <h2 className="text-xl font-bold">Find Me Online</h2>
+      <Heading
+        text="Find Me Online"
+        size={HeadingSize.H2}
+      />
 
       <div className="flex flex-wrap gap-2">
         {onlinePresenceLinks.map(({ id, href, ariaLabel, label }) => (

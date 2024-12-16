@@ -1,6 +1,6 @@
 import { SectionType } from "~/lib/types/types";
 import IndividualExperienceSection from "./sections/IndividualExperienceSection";
-import { educationData, internshipExperienceData, professionalExperienceData, teachingExperienceData } from "~/lib/data/experienceData";
+import { currentlyDoingExperienceData, educationData, internshipExperienceData, professionalExperienceData, teachingExperienceData } from "~/lib/data/experienceData";
 
 interface ExperienceProps {
     currentSection: SectionType;
@@ -28,7 +28,11 @@ function Experience({ currentSection }: ExperienceProps) {
                     data={teachingExperienceData}
                 />;
             case SectionType.CURRENT:
-                return <p>Currently Doing</p>;
+                return <IndividualExperienceSection
+                    id='current-experience-section'
+                    heading='Currently Doing'
+                    data={currentlyDoingExperienceData}
+                />;;
             case SectionType.EDUCATION:
                 return <IndividualExperienceSection
                     id='education-experience-section'

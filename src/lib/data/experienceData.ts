@@ -7,7 +7,7 @@ const professionalExperienceData = [
                 title: 'Software Engineer',
                 date: 'Nov 2024 - Present',
                 description:
-                    'Collaborated with a team of three engineers to deliver key features for Productable’s innovation management platform, using React, TypeScript, Go, and AWS, ensuring timely and high-quality releases in a fast-paced environment.',
+                    'Delivering key features for Productable’s innovation management platform.',
                 skills: 'TypeScript, React.js, AWS, Go'
             },
         ]
@@ -20,14 +20,14 @@ const professionalExperienceData = [
                 title: 'Advanced Application Engineering Senior Analyst',
                 date: 'Nov 2022 - Oct 2024',
                 description:
-                    'I am a Software Engineer who has worked for Code.org and a leading Social Media company. Now I am creating innovative full-stack applications at the U.S Government.',
-                skills: 'TypeScript/Flow, React.js, JavaScript, GraphQL, Relay, PHP'
+                    'Continued working at Meta. Then did Full-Stack development for the U.S Government.',
+                skills: 'TypeScript, React.js, Next.js, JavaScript, Node.js, AWS'
             },
             {
                 title: 'Advanced Application Engineering Analyst',
                 date: 'Feb 2021 - Nov 2022',
                 description:
-                    'I am a Software Engineer who has worked for Code.org and a leading Social Media company. Now I am creating innovative full-stack applications at the U.S Government.',
+                    'Led and collaborated with off-shores teams to create Full-Stack applications for Code.org and Meta.',
                 skills: 'TypeScript/Flow, React.js, JavaScript, GraphQL, Relay, PHP'
             },
         ]
@@ -126,8 +126,8 @@ const teachingExperienceData = [
                 title: 'Full-Stack Development Instructor',
                 date: 'Apr 2023 - Present',
                 description:
-                    'I am Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers. They will learn Frontend development HTML/CSS, JavaScript React/Redux. Backend Development: Node, ExpressJS, SQL. Computer Science: Data Structures & Algorithms',
-                skills: 'Teaching, Full-Stack Development, Presentations'
+                    'Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers.',
+                skills: 'HTML/CSS, JavaScript, Node, ExpressJS, PostgreSQL, Teaching'
             },
         ]
     },
@@ -139,32 +139,11 @@ const teachingExperienceData = [
                 title: 'Web Development Instructor',
                 date: 'Aug 2020 - Nov 2020',
                 description:
-                    'I worked as a Web Development Instructor teaching 6th - 8th-grade students the fundamentals of Web Development using HTML & CSS.',
+                    'Web Development Instructor teaching 6th - 8th-grade students the fundamentals of Web Development using HTML & CSS.',
                 skills: 'Teaching, HTML, CSS, Presentations'
             },
         ]
     },
-];
-
-const currentlyDoingExperienceData = [
-    {
-        role_title: 'Advanced Application Engineering Senior Analyst',
-        organization: 'Accenture',
-        date: 'Feb 2021 - Present',
-        org_link: 'https://www.accenture.com/us-en',
-        description:
-            'I am a Software Engineer who has worked for Code.org and a leading Social Media company. Now I am creating innovative full-stack applications at the U.S Government.',
-        skills: 'TypeScript/Flow, React.js, JavaScript, GraphQL, Relay, PHP'
-    },
-    {
-        role_title: 'Full-Stack Development Instructor',
-        organization: 'Fullstack Academy',
-        date: 'Apr 2023 - Present',
-        org_link: 'https://www.fullstackacademy.com/',
-        description:
-            'I am Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers. They will learn Frontend development HTML/CSS, JavaScript React/Redux. Backend Development: Node, ExpressJS, SQL. Computer Science: Data Structures & Algorithms',
-        skills: 'Teaching, Full-Stack Development, Presentations'
-    }
 ];
 
 const educationData = [
@@ -181,6 +160,37 @@ const educationData = [
         ]
     },
 ];
+
+const currentlyDoingExperienceData = [
+    {
+        organization: 'Productable',
+        organization_link: 'https://www.accenture.com/us-en',
+        positions: [
+            {
+                title: 'Software Engineer',
+                date: 'Nov 2024 - Present',
+                description:
+                    'Delivering key features for Productable’s innovation management platform.',
+                skills: 'TypeScript, React.js, AWS, Go'
+            },
+        ]
+    },
+    {
+        organization: 'Fullstack Academy',
+        organization_link: 'https://www.fullstackacademy.com/',
+        positions: [
+            {
+                title: 'Full-Stack Development Instructor',
+                date: 'Apr 2023 - Present',
+                description:
+                    'Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers.',
+                skills: 'HTML/CSS, JavaScript, Node, ExpressJS, PostgreSQL, Teaching'
+            },
+        ]
+    },
+];
+
+
 
 export {
     professionalExperienceData,

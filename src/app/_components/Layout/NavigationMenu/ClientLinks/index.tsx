@@ -6,9 +6,10 @@ function ClientLinks() {
   return (
     <Links
       links={[
+        { href: "/", text: "Home" },
         { href: "/about", text: "About" },
-        { href: "/experience", text: "Experience" },
         { href: "/blog", text: "Blog" },
+        { href: "/experience", text: "Experience" },
       ]}
     />
   );

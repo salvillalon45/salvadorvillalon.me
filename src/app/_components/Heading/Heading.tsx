@@ -15,7 +15,7 @@ function Heading({ text, size, className, }: HeadingProps) {
             component = <h1 className={cn("text-3xl font-bold", className)}>{text}</h1>;
             break;
         case HeadingSize.H2:
-            component = <h2 className={className}>{text}</h2>;
+            component = <h2 className={cn("text-xl font-bold", className)}>{text}</h2>;
             break;
         case HeadingSize.H3:
             component = <h3 className={className}>{text}</h3>;

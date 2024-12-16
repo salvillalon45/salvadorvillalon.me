@@ -24,7 +24,10 @@ function BlogPage() {
           </div>
 
           <div className="grid gap-4">
-            <h2 className='text-xl font-bold'>Blogs</h2>
+            <Heading
+              text="Blogs"
+              size={HeadingSize.H2}
+            />
             {blogs.map((blog) => {
               return (
                 <ContentSection key={blog.title} {...blog} />
@@ -33,7 +36,10 @@ function BlogPage() {
           </div>
 
           <div className="grid gap-4">
-            <h2 className='text-xl font-bold'>Media</h2>
+            <Heading
+              text="Media"
+              size={HeadingSize.H2}
+            />
             {media.map((mediaItem) => {
               return (
                 <ContentSection
