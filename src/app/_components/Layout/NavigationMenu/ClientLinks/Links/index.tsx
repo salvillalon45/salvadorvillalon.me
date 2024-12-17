@@ -2,14 +2,14 @@ import { usePathname } from "next/navigation";
 import Link from "./Link";
 
 interface LinksProps {
-  isHamburgerOpen?: boolean;
+  isHamburgerMenuOpen?: boolean;
   links: Array<{
     href: string;
     text: string;
   }>;
 }
 
-function Links({ links, isHamburgerOpen }: LinksProps) {
+function Links({ links, isHamburgerMenuOpen }: LinksProps) {
   const pathname = usePathname();
 
   const isIndeterminate = links.every(({ href }) => {
@@ -20,10 +20,12 @@ function Links({ links, isHamburgerOpen }: LinksProps) {
     return href !== pathname;
   });
 
+  console.log({ isHamburgerMenuOpen })
+
   return (
     <ul
       className={
-        isHamburgerOpen
+        isHamburgerMenuOpen
           ? "margin-0 flex h-full flex-1 flex-col items-center justify-center space-y-5 text-2xl"
           : "group hidden grid-flow-col gap-6 text-sm font-medium sm:grid"
       }
