@@ -1,4 +1,4 @@
-import BlogPage from "./project/BlogPage";
+import BlogPage from "./BlogPage";
 
 function Blog() {
   return (

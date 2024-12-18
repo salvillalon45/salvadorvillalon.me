@@ -4,8 +4,9 @@ import localFont from "next/font/local";
 import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import Layout from "./_components/Layout";
+
 import { cn } from "~/lib/cn";
+import PageLayout from "./_components/Layout/PageLayout";
 
 // export const metadata: Metadata = {
 //   title: "Create T3 App",
@@ -68,12 +69,12 @@ export default function RootLayout({
     <html lang="en" className={`${font.className}`}>
       <body
         className={cn(
-          "rootLayout bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200",
+          "root-layout bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200",
           "flex min-h-screen flex-col",
         )}
       >
         <TRPCReactProvider>
-          <Layout>{children}</Layout>
+          <PageLayout>{children}</PageLayout>
         </TRPCReactProvider>
       </body>
     </html>

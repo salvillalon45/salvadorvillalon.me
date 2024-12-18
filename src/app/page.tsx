@@ -1,14 +1,10 @@
-import { api, HydrateClient } from "~/trpc/server";
+import { HydrateClient } from "~/trpc/server";
 import HomePage from "./(home)/HomePage";
 
-export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
-
-  void api.post.getLatest.prefetch();
-
+export default function Home() {
   return (
     <HydrateClient>
-      <main className="homePageMain">
+      <main className="home-page-main">
         <HomePage />
       </main>
     </HydrateClient>

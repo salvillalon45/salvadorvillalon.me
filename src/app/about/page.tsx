@@ -1,4 +1,4 @@
-import AboutPage from "./project/AboutPage";
+import AboutPage from "./AboutPage";
 
 function About() {
   return (

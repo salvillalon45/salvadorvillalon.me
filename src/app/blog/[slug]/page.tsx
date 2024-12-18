@@ -1,13 +1,13 @@
 import { baseUrl } from "sitemap"
-import { formatDate, getBlogPosts } from "../utils"
 import { notFound } from "next/navigation";
 import Wrapper from "~/app/_components/Wrapper";
 import DividerLine from "~/app/_components/DividerLine";
-import { MarkdownRenderer } from "../components/MarkdownRenderer";
+import { MarkdownRenderer } from "../MarkdownRenderer";
 import { metadata } from "~/app/layout";
-import './AboutSal.css';
+import '../../../styles/AboutSalPost.css';
 import Heading from "~/app/_components/Heading";
-import { HeadingSize } from "~/lib/types/types";
+import { HeadingSize } from "~/lib/types";
+import { formatDate, getBlogPosts } from "~/lib/blog";
 
 interface SlugProps {
     params: { slug: string; }

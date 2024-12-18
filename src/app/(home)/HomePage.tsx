@@ -1,4 +1,4 @@
-import { HeadingSize } from "~/lib/types/types";
+import { HeadingSize } from "~/lib/types";
 import DividerLine from "../_components/DividerLine";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import Heading from "../_components/Heading";
 function HomePage() {
   return (
     <>
-      <section className="homePageIntroSection my-12">
+      <section className="home-page-section my-12">
         <Wrapper>
           <div className="flex justify-between gap-8">
             <div>

@@ -1,4 +1,4 @@
-import ExperiencePage from "./project/ExperiencePage";
+import ExperiencePage from "./ExperiencePage";
 
 function Experience() {
     return (
