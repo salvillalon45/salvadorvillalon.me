@@ -28,6 +28,7 @@ export enum HeadingSize {
 
 export enum RoutesPaths {
     HOME = '/',
+    NOW = '/now',
     ABOUT = '/about',
     BLOG = '/blog',
     EXPERIENCE = '/experience',

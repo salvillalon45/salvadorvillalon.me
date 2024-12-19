@@ -1,4 +1,14 @@
+"use client";
+
+import { Menu } from "lucide-react";
 import Wrapper from "../Wrapper";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTrigger,
+} from "~/app/_components/ui/dialog"
 
 function Footer() {
     return (
@@ -46,6 +56,29 @@ function Footer() {
                                 />
                             </svg>
                         </a>
+
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <button
+                                // onClick={() => console.log('hi')}
+                                // aria-label={isOpen ? "Close menu" : "Open menu"}
+                                >
+                                    <Menu />
+                                </button>
+                            </DialogTrigger >
+
+                            <DialogContent>
+                                <DialogHeader>
+                                    <DialogDescription>
+                                        <p>Links</p>
+                                        <p>Links</p>
+                                        <p>Links</p>
+                                        <p>Links</p>
+                                        <p>Links</p>
+                                    </DialogDescription>
+                                </DialogHeader>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
             </Wrapper>

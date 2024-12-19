@@ -5,16 +5,16 @@ interface LinkProps {
   text: string;
   isActive: boolean;
   isIndeterminate: boolean;
+  onLinkClick?: () => void;
 }
 
-function Link({ href, text, isActive, isIndeterminate }: LinkProps) {
-  const style = `${
-    isIndeterminate
-      ? "hover:opacity-60"
-      : isActive
-        ? "opacity-100"
-        : "opacity-50 hover:opacity-100"
-  } transition-opacity`;
+function Link({ href, text, isActive, isIndeterminate, onLinkClick }: LinkProps) {
+  const style = `${isIndeterminate
+    ? "hover:opacity-60"
+    : isActive
+      ? "opacity-100"
+      : "opacity-50 hover:opacity-100"
+    } transition-opacity`;
   // console.log({ text, href, res: href.startsWith("/") });
   // if (!href.startsWith("/")) {
   //   console.log("inside if");
@@ -31,7 +31,7 @@ function Link({ href, text, isActive, isIndeterminate }: LinkProps) {
   // }
 
   return (
-    <NextLink href={href} className={style}>
+    <NextLink href={href} className={style} onClick={onLinkClick}>
       {text}
     </NextLink>
   );

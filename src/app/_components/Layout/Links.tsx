@@ -1,13 +1,16 @@
+"use client";
+
 import { usePathname } from "next/navigation";
 import Link from "./Link";
 import { routes } from "~/lib/routes";
 import { type RoutesPaths } from "~/lib/types";
 
 interface LinksProps {
-  isHamburgerMenuOpen?: boolean;
+  isMobile?: boolean;
+  onLinkClick?: () => void;
 }
 
-function Links({ isHamburgerMenuOpen }: LinksProps) {
+function Links({ isMobile, onLinkClick }: LinksProps) {
   const links = routes;
   const pathname = usePathname() as RoutesPaths;
 
@@ -22,7 +25,7 @@ function Links({ isHamburgerMenuOpen }: LinksProps) {
   return (
     <ul
       className={
-        isHamburgerMenuOpen
+        isMobile
           ? "margin-0 flex h-full flex-1 flex-col items-center justify-center space-y-5 text-2xl"
           : "group hidden grid-flow-col gap-6 text-sm font-medium sm:grid"
       }
@@ -34,6 +37,7 @@ function Links({ isHamburgerMenuOpen }: LinksProps) {
             text={text}
             isActive={href === pathname}
             isIndeterminate={isIndeterminate}
+            onLinkClick={onLinkClick}
           />
         </li>
       ))}
