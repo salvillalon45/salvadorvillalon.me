@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { History } from 'lucide-react';
 import Wrapper from "../Wrapper";
 import {
     Dialog,
@@ -9,6 +9,8 @@ import {
     DialogHeader,
     DialogTrigger,
 } from "~/app/_components/ui/dialog"
+import { externalRoutesArray } from '~/lib/routes';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 function Footer() {
     return (
@@ -58,23 +60,29 @@ function Footer() {
                         </a>
 
                         <Dialog>
-                            <DialogTrigger asChild>
-                                <button
-                                // onClick={() => console.log('hi')}
-                                // aria-label={isOpen ? "Close menu" : "Open menu"}
-                                >
-                                    <Menu />
+                            <DialogTrigger asChild className='flex gap-1 items-center'>
+                                <button>
+                                    <History /> Travel to the past
                                 </button>
                             </DialogTrigger >
 
                             <DialogContent>
-                                <DialogHeader>
+                                <DialogHeader className='grid gap-2 justify-center'>
+                                    <DialogTitle className='text-xl'>Go back in time...</DialogTitle>
                                     <DialogDescription>
-                                        <p>Links</p>
-                                        <p>Links</p>
-                                        <p>Links</p>
-                                        <p>Links</p>
-                                        <p>Links</p>
+                                        <ul className='flex flex-col items-center gap-1 text-xl font-bold'>
+                                            {externalRoutesArray.map((route) => (
+                                                <li key={route.href}>
+                                                    <a
+                                                        href={route.href}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        {route.text}
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </DialogDescription>
                                 </DialogHeader>
                             </DialogContent>

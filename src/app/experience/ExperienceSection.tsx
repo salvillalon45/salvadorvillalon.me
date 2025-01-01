@@ -1,7 +1,7 @@
 import { type ExperiencesDataArray, HeadingSize } from "~/lib/types";
 import Heading from "~/app/_components/Heading";
-import DividerLine from "~/app/_components/DividerLine";
 import ExperienceItem from "./ExperienceItem";
+import { Separator } from "../_components/ui/separator";
 
 interface ExperienceSectionProps {
     id: string;
@@ -50,7 +50,7 @@ function ExperienceSection({ id, heading, data }: ExperienceSectionProps) {
 
                             {
                                 index + 1 === data.length ? null : (
-                                    <DividerLine style='mb-2 mt-2' />
+                                    <Separator className='mb-2 mt-2' />
                                 )
                             }
                         </>

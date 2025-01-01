@@ -1,14 +1,9 @@
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import Wrapper from "../Wrapper"
 import { cn } from "~/lib/cn"
 import MobileNav from './MobileNav'
 import DesktopNav from './DesktopNav'
-
-// const MobileNav = dynamic(() => import('./MobileNav'), { ssr: false })
-// const DesktopNav = dynamic(() => import('./DesktopNav'))
 
 function NavigationMenu() {
     return (

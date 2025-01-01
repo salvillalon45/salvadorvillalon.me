@@ -26,10 +26,7 @@ export enum HeadingSize {
     H6 = 'h6',
 }
 
-export enum RoutesPaths {
-    HOME = '/',
-    NOW = '/now',
-    ABOUT = '/about',
-    BLOG = '/blog',
-    EXPERIENCE = '/experience',
-}
+export type Routes = Array<{
+    href: string;
+    text: string;
+}>;

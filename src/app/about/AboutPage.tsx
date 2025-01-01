@@ -1,10 +1,10 @@
 import Wrapper from "../_components/Wrapper";
-import DividerLine from "~/app/_components/DividerLine";
 import Heading from "~/app/_components/Heading";
 import { HeadingSize } from "~/lib/types";
 import AboutMeImages from "./AboutMeImages";
 import Intro from "./Intro";
 import Online from "./Online";
+import { Separator } from "../_components/ui/separator";
 
 function AboutPage() {
   return (
@@ -16,7 +16,7 @@ function AboutPage() {
               text="About Salvador Villalon"
               size={HeadingSize.H1}
             />
-            <DividerLine />
+            <Separator />
           </div>
 
           <Intro />

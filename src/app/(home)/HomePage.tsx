@@ -1,8 +1,8 @@
 import { HeadingSize } from "~/lib/types";
-import DividerLine from "../_components/DividerLine";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
 import Heading from "../_components/Heading";
+import { Separator } from "../_components/ui/separator";
 
 function HomePage() {
   return (
@@ -17,7 +17,7 @@ function HomePage() {
                   size={HeadingSize.H1}
                 />
 
-                <DividerLine />
+                <Separator />
 
                 <p className="sm:max-w-md">
                   I&apos;m a Software Engineer based in Calexico, CA. I{" "}

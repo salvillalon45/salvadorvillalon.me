@@ -2,17 +2,17 @@
 
 import { usePathname } from "next/navigation";
 import Link from "./Link";
-import { routes } from "~/lib/routes";
-import { type RoutesPaths } from "~/lib/types";
+import { type Routes } from "~/lib/types";
 
 interface LinksProps {
   isMobile?: boolean;
   onLinkClick?: () => void;
+  routes: Routes
 }
 
-function Links({ isMobile, onLinkClick }: LinksProps) {
+function Links({ isMobile, onLinkClick, routes }: LinksProps) {
   const links = routes;
-  const pathname = usePathname() as RoutesPaths;
+  const pathname = usePathname();
 
   const isIndeterminate = links.every(({ href }) => {
     /*

@@ -1,9 +1,9 @@
-import DividerLine from "~/app/_components/DividerLine";
 import Wrapper from "~/app/_components/Wrapper";
 import { fetchBlogs, fetchMedia } from "~/lib/blog";
 import ContentSection from "./ContentSection";
 import Heading from "~/app/_components/Heading";
 import { HeadingSize } from "~/lib/types";
+import { Separator } from "../_components/ui/separator";
 
 function BlogPage() {
   const blogs = fetchBlogs();
@@ -19,7 +19,7 @@ function BlogPage() {
               text="Blogs & Media"
               size={HeadingSize.H1}
             />
-            <DividerLine />
+            <Separator />
             <p>My writing and where I been online!</p>
           </div>
 

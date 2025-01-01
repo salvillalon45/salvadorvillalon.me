@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: 'Experience' };
 
 function Experience() {
     return (
-        <main className="experiencePageMain">
+        <main className="experience-page-main">
             <ExperiencePage />
         </main>
     );

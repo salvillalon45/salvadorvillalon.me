@@ -1,13 +1,12 @@
 import { baseUrl } from "sitemap"
 import { notFound } from "next/navigation";
 import Wrapper from "~/app/_components/Wrapper";
-import DividerLine from "~/app/_components/DividerLine";
 import { MarkdownRenderer } from "../MarkdownRenderer";
-import { metadata } from "~/app/layout";
 import '../../../styles/AboutSalPost.css';
 import Heading from "~/app/_components/Heading";
 import { HeadingSize } from "~/lib/types";
 import { formatDate, getBlogPosts } from "~/lib/blog";
+import { Separator } from "~/app/_components/ui/separator";
 
 interface SlugProps {
     params: { slug: string; }
@@ -104,7 +103,7 @@ export default function BlogSlug({ params }: SlugProps) {
                             text={post.metadata.title}
                             size={HeadingSize.H1}
                         />
-                        <DividerLine />
+                        <Separator />
                         <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             {formatDate(post.metadata.publishedAt)}
                         </p>

@@ -10,6 +10,7 @@ import {
     DialogTrigger,
 } from "~/app/_components/ui/dialog"
 import { useEffect, useState, } from "react";
+import { inAppRoutesArray } from "~/lib/routes";
 
 function MobileNav() {
     const [isMounted, setIsMounted] = useState(false)
@@ -40,7 +41,7 @@ function MobileNav() {
                 <DialogContent>
                     <DialogHeader>
                         <DialogDescription>
-                            <Links isMobile onLinkClick={handleLinkClick} />
+                            <Links routes={inAppRoutesArray} isMobile onLinkClick={handleLinkClick} />
                         </DialogDescription>
                     </DialogHeader>
                 </DialogContent>
