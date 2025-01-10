@@ -22,9 +22,7 @@ function RunPage() {
                         <p>Come run with me</p>
                     </div>
 
-                    <div className="grid gap-4">
-                        <DataTable columns={columns} data={data} />
-                    </div>
+                    <DataTable columns={columns} data={data} />
                 </div>
             </Wrapper>
         </section>

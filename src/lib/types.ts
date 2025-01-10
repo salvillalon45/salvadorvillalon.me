@@ -30,3 +30,8 @@ export type Routes = Array<{
     href: string;
     text: string;
 }>;
+
+export enum RunTableFilters {
+    TYPE = 'type',
+    LOCATION = 'location',
+}

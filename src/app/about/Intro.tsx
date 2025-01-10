@@ -39,8 +39,13 @@ function Intro() {
           California, Irvine{" "}
         </p>
         <p>
-          Outside of work, I am out in the wild hiking, at the tennis courts,
-          running in the fields and cities, coding, and writing tech articles.
+          Outside of work, I am out in the wild hiking, at the tennis courts, {' '}
+          <a
+            href="/run"
+            className="underline"
+          >
+            running in the fields and cities,
+          </a>{' '}coding, and writing tech articles.
         </p>
 
         <div className='grid gap-4'>

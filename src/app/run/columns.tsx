@@ -1,6 +1,8 @@
 "use client"
 
 import { type ColumnDef } from "@tanstack/react-table"
+import { Button } from "../_components/ui/button";
+import { ArrowUpDown } from "lucide-react";
 
 export interface RunData {
     id: string;
@@ -19,7 +21,17 @@ export const columns: ColumnDef<RunData>[] = [
     },
     {
         accessorKey: "date",
-        header: "Date",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Date
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
     },
     {
         accessorKey: "location",
@@ -27,11 +39,31 @@ export const columns: ColumnDef<RunData>[] = [
     },
     {
         accessorKey: "type",
-        header: "Type",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Type
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
     },
     {
         accessorKey: "race_time",
-        header: "Race Time",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Race Time
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
     },
     {
         accessorKey: "results",
