@@ -1,6 +1,6 @@
 import { SectionLabel, SectionType } from "~/lib/types";
 import IndividualExperienceSection from "./ExperienceSection";
-import { professionalExperienceData, internshipExperienceData, teachingExperienceData, currentlyDoingExperienceData, educationData } from "~/lib/experienceData";
+import { professionalExperienceData, internshipExperienceData, teachingExperienceData, currentlyDoingExperienceData, educationData } from "~/lib/ExperienceData";
 
 interface ExperienceListProps {
     currentSection: SectionType;
