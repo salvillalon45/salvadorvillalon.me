@@ -25,6 +25,14 @@ export enum SectionLabel {
     EDUCATION = 'Education',
 }
 
+export enum NowSections {
+    CAREER = 'Career',
+    EDUCATION = 'Education & Projects',
+    LIFE = 'Life & Misc',
+    FINANCE = 'Finance',
+    READING = 'Reading',
+}
+
 export enum HeadingSize {
     H1 = 'h1',
     H2 = 'h2',

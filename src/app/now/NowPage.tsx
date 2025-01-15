@@ -1,8 +1,9 @@
-import { HeadingSize } from "~/lib/types";
+import { HeadingSize, NowSections } from "~/lib/types";
 import Heading from "../_components/Heading";
 import Wrapper from "../_components/Wrapper";
 import { Separator } from "../_components/ui/separator";
 import '../../styles/NowPage.css';
+import AnchorLink from "../_components/AnchorLink";
 
 function NowPage() {
     return (
@@ -21,7 +22,7 @@ function NowPage() {
 
                     <div className='grid gap-4'>
                         <Heading
-                            text="Education & Projects"
+                            text={NowSections.EDUCATION}
                             size={HeadingSize.H2}
                         />
                         <Separator />
@@ -47,7 +48,7 @@ function NowPage() {
 
                     <div className='grid gap-4'>
                         <Heading
-                            text="Career"
+                            text={NowSections.CAREER}
                             size={HeadingSize.H2}
                         />
                         <Separator />
@@ -58,6 +59,31 @@ function NowPage() {
                                 <li>Gain this new mindset: Understand the Product & Business to create good engineering solutions</li>
                             </ul>
                         </ul>
+                    </div>
+
+                    <div className='grid gap-4'>
+                        <Heading
+                            text={NowSections.LIFE}
+                            size={HeadingSize.H2}
+                        />
+                        <Separator />
+                        <ul>
+                            <li>Run 1 - 2 Half Marathons</li>
+                            <li>Join a tennis team with USTA SoCal tennis</li>
+                            <li>Go on more hikes!</li>
+                            <li>Get better at snowboarding</li>
+                            <li>Plan 3 days weekend given throughout the year to explore new area. Interested in National Parks and sightseeing</li>
+                            <li>Currently doing a powerlifting program from The Strength Athlete</li>
+                        </ul>
+                    </div>
+
+                    <div className='grid gap-4'>
+                        <p>This is a <AnchorLink
+                            href="https://nownownow.com/"
+                            text="Now page"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        />. You can make one too!</p>
                     </div>
                 </div>
             </Wrapper>
