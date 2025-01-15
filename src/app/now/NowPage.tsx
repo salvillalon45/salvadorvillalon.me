@@ -2,6 +2,7 @@ import { HeadingSize } from "~/lib/types";
 import Heading from "../_components/Heading";
 import Wrapper from "../_components/Wrapper";
 import { Separator } from "../_components/ui/separator";
+import '../../styles/NowPage.css';
 
 function NowPage() {
     return (
@@ -60,7 +61,7 @@ function NowPage() {
                     </div>
                 </div>
             </Wrapper>
-        </section>
+        </section >
     )
 }
 

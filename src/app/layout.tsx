@@ -17,13 +17,12 @@ export const metadata: Metadata = {
     "I'm a Full - Stack Engineer based in SoCal, that loves to code and " +
     "build products with a delightful user experience." +
     "I love working in between product, engineering and developer experience.",
-  // metadataBase: new URL("https://carloscuesta.me"),
+  metadataBase: new URL("https://salvador-villalon.vercel.app/"),
   openGraph: {
     type: "website",
     locale: "en-US",
     siteName: "Salvador Villalon",
-    //TODO: Change to my url
-    url: "https://carloscuesta.me",
+    url: "https://salvador-villalon.vercel.app/",
   },
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
