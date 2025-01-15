@@ -15,7 +15,7 @@ function Link({ href, text, isActive, isIndeterminate, onLinkClick }: LinkProps)
       ? "opacity-100"
       : "opacity-50 hover:opacity-100"
     } transition-opacity`;
-  // console.log({ text, href, res: href.startsWith("/") });
+
   // if (!href.startsWith("/")) {
   //   console.log("inside if");
   //   return (
