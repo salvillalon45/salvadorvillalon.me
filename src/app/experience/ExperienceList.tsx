@@ -1,6 +1,6 @@
-import { SectionType } from "~/lib/types";
+import { SectionLabel, SectionType } from "~/lib/types";
 import IndividualExperienceSection from "./ExperienceSection";
-import { professionalExperienceData, internshipExperienceData, teachingExperienceData, currentlyDoingExperienceData, educationData } from "~/lib/ExperienceData";
+import { professionalExperienceData, internshipExperienceData, teachingExperienceData, currentlyDoingExperienceData, educationData } from "~/lib/experienceData";
 
 interface ExperienceListProps {
     currentSection: SectionType;
@@ -9,34 +9,34 @@ interface ExperienceListProps {
 function ExperienceList({ currentSection }: ExperienceListProps) {
     function showExperienceContent() {
         switch (currentSection) {
-            case SectionType.FULL_TIME:
+            case SectionType.PROFESSIONAL:
                 return <IndividualExperienceSection
                     id='professional-experience-section'
-                    heading='Profesional Experience'
+                    heading={SectionLabel.PROFESSIONAL}
                     data={professionalExperienceData}
                 />;
             case SectionType.INTERNSHIPS:
                 return <IndividualExperienceSection
                     id='internships-experience-section'
-                    heading='Internships'
+                    heading={SectionLabel.INTERNSHIPS}
                     data={internshipExperienceData}
                 />;
             case SectionType.TEACHING:
                 return <IndividualExperienceSection
                     id='teaching-experience-section'
-                    heading='Teaching'
+                    heading={SectionLabel.TEACHING}
                     data={teachingExperienceData}
                 />;
             case SectionType.CURRENT:
                 return <IndividualExperienceSection
                     id='current-experience-section'
-                    heading='Currently Doing'
+                    heading={SectionLabel.CURRENT}
                     data={currentlyDoingExperienceData}
                 />;;
             case SectionType.EDUCATION:
                 return <IndividualExperienceSection
                     id='education-experience-section'
-                    heading='Education'
+                    heading={SectionLabel.EDUCATION}
                     data={educationData}
                 />;
             default:

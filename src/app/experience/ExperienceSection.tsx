@@ -1,11 +1,12 @@
-import { type ExperiencesDataArray, HeadingSize } from "~/lib/types";
+import { type ExperiencesDataArray, HeadingSize, SectionLabel } from "~/lib/types";
 import Heading from "~/app/_components/Heading";
 import ExperienceItem from "./ExperienceItem";
 import { Separator } from "../_components/ui/separator";
+import AnchorLink from "../_components/AnchorLink";
 
 interface ExperienceSectionProps {
     id: string;
-    heading: string;
+    heading: SectionLabel
     data: ExperiencesDataArray;
 }
 
@@ -23,9 +24,13 @@ function ExperienceSection({ id, heading, data }: ExperienceSectionProps) {
                         <>
                             <div>
                                 <p>
-                                    <a className='underline' href={orgLink}>
-                                        <b>{organization}</b>
-                                    </a>
+                                    <AnchorLink
+                                        href={orgLink}
+                                        text={organization}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-bold underline"
+                                    />
                                 </p>
                             </div>
 

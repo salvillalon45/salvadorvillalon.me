@@ -1,3 +1,5 @@
+import AnchorLink from "../_components/AnchorLink";
+
 interface ContentSectionProps {
     link: string;
     slug: string;
@@ -7,6 +9,7 @@ interface ContentSectionProps {
 
 function ContentSection({ link, slug, publishedAt, title }: ContentSectionProps) {
     const anchorNavigation = link ? link : `blog/${slug}`;
+    const target = link ? '_blank' : '_self';
 
     return (
         <section key={title}>
@@ -23,12 +26,17 @@ function ContentSection({ link, slug, publishedAt, title }: ContentSectionProps)
                         {publishedAt}
                     </time>
 
-                    <a
-                        href={anchorNavigation}
-                        className=""
-                    >
-                        <p className="font-medium">{title}</p>
-                    </a>
+                    <p className="font-medium">
+                        <AnchorLink
+                            href={anchorNavigation}
+                            text={title}
+                            target={target}
+                            rel="noopener noreferrer"
+                            className="no-underline"
+
+                        />
+                    </p>
+
                 </li>
             </ul>
         </section>

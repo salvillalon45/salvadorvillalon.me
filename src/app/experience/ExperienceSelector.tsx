@@ -7,7 +7,7 @@ import {
     SelectTrigger,
     SelectValue
 } from "~/app/_components/ui/select"
-import { SectionType } from "~/lib/types";
+import { SectionLabel, SectionType } from "~/lib/types";
 
 interface ExperienceSelectorProps {
     currentSection: SectionType;
@@ -16,11 +16,11 @@ interface ExperienceSelectorProps {
 
 function ExperienceSelector({ currentSection, setCurrentSection }: ExperienceSelectorProps) {
     const experienceSections = [
-        { label: 'Currently Doing', value: SectionType.CURRENT },
-        { label: 'Professional Experience', value: SectionType.FULL_TIME },
-        { label: 'Internships', value: SectionType.INTERNSHIPS },
-        { label: 'Teaching', value: SectionType.TEACHING },
-        { label: 'Education', value: SectionType.EDUCATION },
+        { label: SectionLabel.CURRENT, value: SectionType.CURRENT },
+        { label: SectionLabel.PROFESSIONAL, value: SectionType.PROFESSIONAL },
+        { label: SectionLabel.INTERNSHIPS, value: SectionType.INTERNSHIPS },
+        { label: SectionLabel.TEACHING, value: SectionType.TEACHING },
+        { label: SectionLabel.EDUCATION, value: SectionType.EDUCATION },
     ];
 
     return (

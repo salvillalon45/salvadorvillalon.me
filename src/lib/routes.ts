@@ -1,6 +1,6 @@
 export const inAppRoutes = {
     'Home': '/',
-    // 'Now': '/now',
+    'Now': '/now',
     'About': '/about',
     'Blog': '/blog',
     'Experience': '/experience',

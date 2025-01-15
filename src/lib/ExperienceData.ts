@@ -1,7 +1,7 @@
 const professionalExperienceData = [
     {
         organization: 'Productable',
-        organization_link: 'https://www.accenture.com/us-en',
+        organization_link: 'https://www.beproductable.com/',
         positions: [
             {
                 title: 'Software Engineer',
@@ -189,8 +189,6 @@ const currentlyDoingExperienceData = [
         ]
     },
 ];
-
-
 
 export {
     professionalExperienceData,

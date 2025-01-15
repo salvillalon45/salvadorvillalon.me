@@ -10,11 +10,19 @@ export type ExperiencesDataArray = Array<{
 }>
 
 export enum SectionType {
-    FULL_TIME = 'FULL_TIME',
+    PROFESSIONAL = 'PROFESSIONAL',
     INTERNSHIPS = 'INTERNSHIPS',
     TEACHING = 'TEACHING',
     CURRENT = 'CURRENT',
     EDUCATION = 'EDUCATION',
+}
+
+export enum SectionLabel {
+    PROFESSIONAL = 'Professional Experience',
+    INTERNSHIPS = 'Internships',
+    TEACHING = 'Teaching',
+    CURRENT = 'Currently Doing',
+    EDUCATION = 'Education',
 }
 
 export enum HeadingSize {

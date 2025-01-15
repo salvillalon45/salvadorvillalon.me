@@ -1,5 +1,6 @@
 import Heading from "~/app/_components/Heading";
 import { HeadingSize } from "~/lib/types";
+import AnchorLink from "../_components/AnchorLink";
 
 function Online() {
   const onlinePresenceLinks = [
@@ -20,6 +21,12 @@ function Online() {
       href: "/follow/freecodecamp",
       ariaLabel: "Visit my freeCodeCamp",
       label: "freeCodeCamp",
+    },
+    {
+      id: "strava",
+      href: "/follow/strava",
+      ariaLabel: "Visit my Strava",
+      label: "Strava",
     }
   ];
 
@@ -32,14 +39,15 @@ function Online() {
 
       <div className="flex flex-wrap gap-2">
         {onlinePresenceLinks.map(({ id, href, ariaLabel, label }) => (
-          <a
+          <AnchorLink
             key={id}
             href={href}
+            text={label}
             aria-label={ariaLabel}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
-          >
-            {label}
-          </a>
+          />
         ))}
       </div>
     </section>

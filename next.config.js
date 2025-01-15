@@ -101,6 +101,11 @@ const plaiceholderConfig = withPlaiceholder({
       destination: "https://www.freecodecamp.org/news/author/salvadorvillalon/",
       permanent: true,
     },
+    {
+      source: "/follow/strava",
+      destination: "https://www.strava.com/athletes/125519279",
+      permanent: true,
+    },
   ],
   headers: async () => [
     {

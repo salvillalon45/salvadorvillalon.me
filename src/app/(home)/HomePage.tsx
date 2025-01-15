@@ -3,6 +3,7 @@ import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
 import Heading from "../_components/Heading";
 import { Separator } from "../_components/ui/separator";
+import AnchorLink from "../_components/AnchorLink";
 
 function HomePage() {
   return (
@@ -21,37 +22,31 @@ function HomePage() {
 
                 <p className="sm:max-w-md">
                   I&apos;m a Software Engineer based in Calexico, CA. I{" "}
-                  <a
-                    className="underline"
+                  <AnchorLink
                     href="https://www.freecodecamp.org/news/author/salvadorvillalon/"
+                    text="learn"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    learn
-                  </a>
-                  ,
-                  <a
-                    className="underline"
+                  />
+                  ,{' '}
+                  <AnchorLink
                     href="https://github.com/salvillalon45"
+                    text="code"
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    {" "}
-                    code
-                  </a>{" "}
+                  />{' '}
                   and build unique solutions.
                 </p>
                 <p className="sm:max-w-md">
                   I use Full Stack expertise, optimism, and agile learning to
                   listen to the pain points of users and cooperate with my team
                   to innovate digital experiences. Currently working at {""}
-                  <a
-                    className="underline"
-                    target="_blank"
+                  <AnchorLink
                     href="https://www.beproductable.com/"
-                  >
-                    Productable
-                  </a>
+                    text="Productable"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />.
                 </p>
               </div>
             </div>
