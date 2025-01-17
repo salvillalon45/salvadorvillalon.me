@@ -1,0 +1,16 @@
+.image-grid {
+    /* width: 10%; */
+}
+
+@media (min-width: 768px) {
+    .gallery-page-section .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (min-width: 1024px) {
+    .gallery-page-section .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
