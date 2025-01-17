@@ -24,6 +24,10 @@ main {
   flex-grow: 1;
 }
 
+img {
+  pointer-events: none;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
