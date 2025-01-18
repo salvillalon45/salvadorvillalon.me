@@ -33,7 +33,6 @@ function ContentSection({ link, slug, publishedAt, title }: ContentSectionProps)
                             target={target}
                             rel="noopener noreferrer"
                             className="no-underline"
-
                         />
                     </p>
 

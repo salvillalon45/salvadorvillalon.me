@@ -25,6 +25,30 @@ export enum SectionLabel {
     EDUCATION = 'Education',
 }
 
+export enum GalleryYearValue {
+    YEAR_2024 = '2024',
+    YEAR_2023 = '2023',
+    YEAR_2022 = '2022'
+}
+
+export enum GalleryLabel {
+    YEAR_2024 = '2024',
+    YEAR_2023 = '2023',
+    YEAR_2022 = '2022'
+}
+
+export type Gallery = Array<{
+    year: string;
+    albums: Array<AlbumItem>
+}>
+
+export interface AlbumItem {
+    title: string;
+    location: string;
+    slug: string;
+    pictures: Array<{ src: string; alt: string; }>;
+}
+
 export enum NowSections {
     CAREER = 'Career',
     EDUCATION = 'Education & Projects',
