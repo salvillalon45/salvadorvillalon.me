@@ -13,7 +13,6 @@ function BlogPage() {
     <section className="blogPageSection my-12">
       <Wrapper>
         <div className="grid gap-12">
-          {/* // TODO: Turn this into a reusable heading component */}
           <div className='grid gap-4'>
             <Heading
               text="Blogs & Media"

@@ -31,7 +31,6 @@ function MobileNav() {
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
                     <button
-                        onClick={() => console.log('hi')}
                         aria-label={isOpen ? "Close menu" : "Open menu"}
                     >
                         <Menu />

@@ -1,7 +1,6 @@
 import { getBlogPosts } from "~/lib/blog"
 
-// export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
-export const baseUrl = 'http://localhost:3000'
+export const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://salvador-villalon.vercel.app/'
 
 export default async function sitemap() {
     const blogs = getBlogPosts().map((post) => ({

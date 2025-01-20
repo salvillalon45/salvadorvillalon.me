@@ -124,7 +124,7 @@ const teachingExperienceData = [
         positions: [
             {
                 title: 'Full-Stack Development Instructor',
-                date: 'Apr 2023 - Present',
+                date: 'Apr 2023 - Jan 2025',
                 description:
                     'Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers.',
                 skills: 'HTML/CSS, JavaScript, Node, ExpressJS, PostgreSQL, Teaching'
@@ -174,20 +174,7 @@ const currentlyDoingExperienceData = [
                 skills: 'TypeScript, React.js, AWS, Go'
             },
         ]
-    },
-    {
-        organization: 'Fullstack Academy',
-        organization_link: 'https://www.fullstackacademy.com/',
-        positions: [
-            {
-                title: 'Full-Stack Development Instructor',
-                date: 'Apr 2023 - Present',
-                description:
-                    'Full-Stack JavaScript Instructor teaching BootCamp students how to become Software Engineers.',
-                skills: 'HTML/CSS, JavaScript, Node, ExpressJS, PostgreSQL, Teaching'
-            },
-        ]
-    },
+    }
 ];
 
 export {

@@ -1,9 +1,12 @@
+import { RoutesLabels, RoutesValues } from "./types";
+
 export const inAppRoutes = {
-    'Home': '/',
-    'Now': '/now',
-    'About': '/about',
-    'Blog': '/blog',
-    'Experience': '/experience',
+    [RoutesLabels.HOME]: RoutesValues.HOME,
+    [RoutesLabels.NOW]: RoutesValues.NOW,
+    [RoutesLabels.ABOUT]: RoutesValues.ABOUT,
+    [RoutesLabels.BLOG]: RoutesValues.BLOG,
+    [RoutesLabels.EXPERIENCE]: RoutesValues.EXPERIENCE,
+    [RoutesLabels.GALLERY]: RoutesValues.GALLERY,
 }
 
 export const externalRoutes = {
