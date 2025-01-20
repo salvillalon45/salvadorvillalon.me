@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { baseUrl } from "sitemap"
 import { notFound } from "next/navigation";
 import Wrapper from "~/app/_components/Wrapper";
@@ -8,6 +9,7 @@ import { fetchGallery } from "~/lib/gallery";
 import AnchorLink from "~/app/_components/AnchorLink";
 
 import '../../../styles/AboutSalPost.css';
+import { Card, CardContent, CardFooter } from "~/app/_components/ui/card";
 
 interface SlugProps {
     params: {
@@ -98,21 +100,42 @@ export default function YearSlug({ params }: SlugProps) {
                 <div className="grid gap-12">
                     <div className='grid gap-4'>
                         <Heading
-                            text={year}
+                            text={`Gallery ${year}`}
                             size={HeadingSize.H1}
                         />
+                        <p>The Adventures in {year}. Click on a picture to see the gallery.</p>
                         <Separator />
+                        <AnchorLink
+                            href={`/gallery`}
+                            text="Back"
+                            className="max-w-fit bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
+                        />
                     </div>
 
-                    <article>
-                        {albums.map(({ title, slug }) => (
-                            <div key={title}>
-                                <AnchorLink
-                                    href={`/gallery/${year}/${slug}`}
-                                    text={title}
-                                />
-                            </div>
-                        ))}
+                    <article className='grid gap-20 grid-cols-1 md:grid-cols-3 m-auto'>
+                        {albums.map(({ pictures, title, slug }) => {
+                            const { src, alt, } = pictures[0]!
+                            console.log(pictures[0])
+                            return (
+                                <a key={title} href={`/gallery/${year}/${slug}`}>
+                                    <Card className="overflow-hidden w-64 hover:scale-[1.02] transition-transform duration-200">
+                                        <CardContent className="p-0 h-64 relative">
+                                            <Image
+                                                src={src}
+                                                alt={alt}
+                                                className="object-cover"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                fill
+                                            />
+                                        </CardContent>
+
+                                        <CardFooter className="flex justify-center p-5">
+                                            <p className="text-md font-light text-center">{title}</p>
+                                        </CardFooter>
+                                    </Card>
+                                </a>
+                            );
+                        })}
                     </article>
                 </div>
             </Wrapper>

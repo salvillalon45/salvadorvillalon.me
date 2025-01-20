@@ -6,23 +6,29 @@ interface YearProps {
 
 function Year({ year }: YearProps) {
     return (
-        <section key={year}>
-            <ul className="grid grid-flow-row gap-3">
-                <li
-                    key={year}
-                    className="flex flex-col-reverse sm:flex-row sm:gap-10 gap-4 px-3 py-2 -mx-3 rounded-lg transition-all focus-within:bg-neutral-100 hover:bg-neutral-100 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900"
-                >
-                    <p className="font-medium">
-                        <AnchorLink
-                            href={`gallery/${year}`}
-                            text={year}
-                            target={'_self'}
-                            rel="noopener noreferrer"
-                            className="no-underline"
-                        />
-                    </p>
-                </li>
-            </ul>
+        <section className='year-section' key={year}>
+            <div>
+                <AnchorLink
+                    href={`gallery/${year}`}
+                    text={year}
+                    target={'_self'}
+                    rel="noopener noreferrer"
+                    className="
+                        max-w-fit
+                        bg-primary
+                        text-primary-foreground
+                        hover:bg-primary/90
+                        flex
+                        items-center
+                        rounded-md
+                        px-3
+                        py-2
+                        transition-colors
+                        text-3xl
+                        font-extrabold
+                    "
+                />
+            </div>
         </section>
     )
 }

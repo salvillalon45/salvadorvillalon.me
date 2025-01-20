@@ -46,6 +46,7 @@ export interface AlbumItem {
     title: string;
     location: string;
     slug: string;
+    description: string;
     pictures: Array<{ src: string; alt: string; }>;
 }
 
@@ -70,6 +71,24 @@ export type Routes = Array<{
     href: string;
     text: string;
 }>;
+
+export enum RoutesValues {
+    HOME = '/',
+    NOW = '/now',
+    ABOUT = '/about',
+    BLOG = '/blog',
+    EXPERIENCE = '/experience',
+    GALLERY = '/gallery'
+}
+
+export enum RoutesLabels {
+    HOME = 'Home',
+    NOW = 'Now',
+    ABOUT = 'About',
+    BLOG = 'Blog',
+    EXPERIENCE = 'Experience',
+    GALLERY = 'Gallery'
+}
 
 export enum RunTableFilters {
     TYPE = 'type',

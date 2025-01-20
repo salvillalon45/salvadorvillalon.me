@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 
 function AlbumSlug({ params }: SlugProps) {
     const gallery = fetchGallery().find(({ year }) => year === params.year)!
-    const { pictures, location, title } = gallery.albums.find(({ slug }) => slug === params.album)!
+    const { pictures, location, title, description } = gallery.albums.find(({ slug }) => slug === params.album)!
 
     return (
         <section className={`album-section my-12`}>
@@ -41,7 +41,11 @@ function AlbumSlug({ params }: SlugProps) {
                             text={title}
                             size={HeadingSize.H1}
                         />
-
+                        <p>
+                            <span className="font-bold">Location:</span>{' '}
+                            <span className="underline">{location}</span>
+                        </p>
+                        <p className="font-medium">{description}</p>
                         <Separator />
 
                         <AnchorLink
@@ -53,15 +57,18 @@ function AlbumSlug({ params }: SlugProps) {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {pictures.map((image, index) => {
-                            return (<div key={index} className="relative w-full h-[300px]">
-                                <Image
-                                    src={image.src}
-                                    alt={image.alt}
-                                    fill
-                                    className="object-cover rounded-lg hover:scale-[1.02] transition-transform duration-200"
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                />
-                            </div>)
+                            return (
+                                // <div key={index} className="relative w-full h-[600px] w-[300px]">
+                                <div key={index} className="relative w-full h-[500px]">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover rounded-lg hover:scale-[1.02] transition-transform duration-200"
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                    />
+                                </div>
+                            );
                         })}
                     </div>
                 </div>
