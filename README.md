@@ -5,6 +5,7 @@ This is the portfolio version 5. A portal on all things Salvador Villalon.
 In the portfolio, you will find the following pages:
 - **Now**: What I am currently focusing on. [You can make one too!](https://nownownow.com/).
 - **About**: Quick intro on me.
+    - There is a running table as well! To keep track of the all races I have competed in.
 - **Blog**: Writing straight from my mind.
 - **Experience**: A history of my professional experience.
 - **Gallery**: Pictures of my adventures.
