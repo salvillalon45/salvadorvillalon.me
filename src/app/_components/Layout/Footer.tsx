@@ -11,6 +11,7 @@ import {
 } from "~/app/_components/ui/dialog"
 import { externalRoutesArray } from '~/lib/routes';
 import { DialogTitle } from '@radix-ui/react-dialog';
+import AnchorLink from '../AnchorLink';
 
 function Footer() {
     return (
@@ -24,6 +25,7 @@ function Footer() {
                     <div className="flex items-center">
                         <a
                             href="/follow/github"
+                            target="_blank"
                             aria-label="Visit my GitHub"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
@@ -43,6 +45,7 @@ function Footer() {
 
                         <a
                             href="/follow/linkedin"
+                            target="_blank"
                             aria-label="Visit my LinkedIn"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
@@ -71,15 +74,14 @@ function Footer() {
                                     <DialogTitle className='text-xl'>Go back in time...</DialogTitle>
                                     <DialogDescription>
                                         <ul className='flex flex-col items-center gap-1 text-xl font-bold'>
-                                            {externalRoutesArray.map((route) => (
-                                                <li key={route.href}>
-                                                    <a
-                                                        href={route.href}
+                                            {externalRoutesArray.map(({ href, text, }) => (
+                                                <li key={href}>
+                                                    <AnchorLink
+                                                        href={href}
+                                                        text={text}
                                                         target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        {route.text}
-                                                    </a>
+                                                        rel="noopener noreferrer"
+                                                    />
                                                 </li>
                                             ))}
                                         </ul>
