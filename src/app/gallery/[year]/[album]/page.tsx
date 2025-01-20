@@ -58,7 +58,6 @@ function AlbumSlug({ params }: SlugProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {pictures.map((image, index) => {
                             return (
-                                // <div key={index} className="relative w-full h-[600px] w-[300px]">
                                 <div key={index} className="relative w-full h-[500px]">
                                     <Image
                                         src={image.src}
