@@ -80,7 +80,7 @@ export function fetchGallery() {
                     title: 'Out in the Wild',
                     location: 'Imperial Valley, California',
                     slug: 'out-in-the-wild',
-                    description: 'Picked up Hiking as a new hobby',
+                    description: 'Picked up Hiking as a new hobby.',
                     pictures: [
                         { src: '/gallery/2023/hiking/1.jpg', alt: 'Hiking Album Picture 1' },
                         { src: '/gallery/2023/hiking/2.jpg', alt: 'Hiking Album Picture 2' },
@@ -139,7 +139,7 @@ export function fetchGallery() {
                         { src: '/gallery/2023/sequioa_national_park/2.jpg', alt: 'Sequioa National Forest Album Picture 2' },
                         { src: '/gallery/2023/sequioa_national_park/3.jpg', alt: 'Sequioa National Forest Album Picture 3' },
                         { src: '/gallery/2023/sequioa_national_park/4.jpg', alt: 'Sequioa National Forest Album Picture 4' },
-                        { src: '/gallery/2023/sequioa_national_park/5.jpg', alt: 'Sequioa National Forest Album Picture 5' },
+                        { src: '/gallery/2023/sequioa_national_park/5.JPG', alt: 'Sequioa National Forest Album Picture 5' },
                         { src: '/gallery/2023/sequioa_national_park/6.jpg', alt: 'Sequioa National Forest Album Picture 6' },
                         { src: '/gallery/2023/sequioa_national_park/7.jpg', alt: 'Sequioa National Forest Album Picture 7' },
                         { src: '/gallery/2023/sequioa_national_park/8.jpg', alt: 'Sequioa National Forest Album Picture 8' }

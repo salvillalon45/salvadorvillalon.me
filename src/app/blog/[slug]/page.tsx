@@ -68,7 +68,6 @@ export default function BlogSlug({ params }: SlugProps) {
         notFound()
     }
 
-    // TODO: Change all class names to use dashes, not camel case
     const classNameIdentifier = `blog-${post.slug}-section`;
 
     return (
@@ -97,7 +96,6 @@ export default function BlogSlug({ params }: SlugProps) {
                     }}
                 />
                 <div className="grid gap-12">
-                    {/* // TODO: Turn this into a reusable heading component */}
                     <div className='grid gap-4'>
                         <Heading
                             text={post.metadata.title}
