@@ -21,7 +21,6 @@ function Footer() {
                             href="/follow/github"
                             target="_blank"
                             aria-label="Visit my GitHub"
-                            target='_blank'
                             rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
@@ -43,7 +42,6 @@ function Footer() {
                             href="/follow/linkedin"
                             target="_blank"
                             aria-label="Visit my LinkedIn"
-                            target='_blank'
                             rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
