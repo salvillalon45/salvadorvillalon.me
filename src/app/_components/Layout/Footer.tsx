@@ -2,13 +2,7 @@
 
 import { History } from 'lucide-react';
 import Wrapper from "../Wrapper";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTrigger,
-} from "~/app/_components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger, } from "~/app/_components/ui/dialog"
 import { externalRoutesArray } from '~/lib/routes';
 import { DialogTitle } from '@radix-ui/react-dialog';
 
@@ -19,14 +13,14 @@ function Footer() {
 
             <Wrapper>
                 <div className="flex items-center justify-between px-1 py-4 text-sm text-neutral-500">
-                    {/* <span>Salvador Villalon © {new Date().getFullYear()}</span> */}
-                    <span>Salvador Villalon © </span>
+                    <span>Salvador Villalon © {new Date().getFullYear()}</span>
 
                     <div className="flex items-center">
                         <a
-                            // href="/follow/github"
-                            href=""
+                            href="/follow/github"
                             aria-label="Visit my GitHub"
+                            target='_blank'
+                            rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
                             <svg
@@ -46,6 +40,8 @@ function Footer() {
                         <a
                             href="/follow/linkedin"
                             aria-label="Visit my LinkedIn"
+                            target='_blank'
+                            rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
                             <svg

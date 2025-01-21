@@ -1,4 +1,4 @@
-import { type ExperiencesDataArray, HeadingSize, SectionLabel } from "~/lib/types";
+import { type ExperiencesDataArray, HeadingSize, type SectionLabel } from "~/lib/types";
 import Heading from "~/app/_components/Heading";
 import ExperienceItem from "./ExperienceItem";
 import { Separator } from "../_components/ui/separator";

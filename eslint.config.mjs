@@ -1,45 +1,3 @@
-// // @ts-check
-
-// import eslint from '@eslint/js';
-// import tseslint from 'typescript-eslint';
-
-// export default {
-//   parser: tseslint.parsers['@typescript-eslint/parser'],
-//   parserOptions: {
-//     project: true
-//   },
-//   extends: [
-//     'next/core-web-vitals',
-//     tseslint.configs.recommended,
-//     tseslint.configs.stylistic,
-//   ],
-//   rules: {
-//     '@typescript-eslint/array-type': 'off',
-//     '@typescript-eslint/consistent-type-definitions': 'off',
-//     '@typescript-eslint/consistent-type-imports': [
-//       'warn',
-//       {
-//         prefer: 'type-imports',
-//         fixStyle: 'inline-type-imports'
-//       }
-//     ],
-//     '@typescript-eslint/no-unused-vars': [
-//       'warn',
-//       {
-//         argsIgnorePattern: '^_'
-//       }
-//     ],
-//     '@typescript-eslint/require-await': 'off',
-//     '@typescript-eslint/no-misused-promises': [
-//       'error',
-//       {
-//         checksVoidReturn: {
-//           attributes: false
-//         }
-//       }
-//     ]
-//   }
-// };
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -53,6 +11,17 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
     ...compat.extends("next/core-web-vitals", "next/typescript"),
+    {
+        rules: {
+            '@typescript-eslint/consistent-type-imports': [
+                'error',
+                {
+                    prefer: 'type-imports',
+                    fixStyle: 'inline-type-imports'
+                }
+            ],
+        }
+    }
 ];
 
 export default eslintConfig;
