@@ -6,25 +6,29 @@ function Online() {
   const onlinePresenceLinks = [
     {
       id: "github",
-      href: "/follow/github",
+      // href: "/follow/github",
+      href: "",
       ariaLabel: "Visit my GitHub",
       label: "GitHub",
     },
     {
       id: "linkedin",
-      href: "/follow/linkedIn",
+      // href: "/follow/linkedIn",
+      href: "/",
       ariaLabel: "Visit my LinkedIn",
       label: "LinkedIn",
     },
     {
       id: "freeCodeCamp",
-      href: "/follow/freecodecamp",
+      // href: "/follow/freecodecamp",
+      href: "/",
       ariaLabel: "Visit my freeCodeCamp",
       label: "freeCodeCamp",
     },
     {
       id: "strava",
-      href: "/follow/strava",
+      // href: "/follow/strava",
+      href: "/",
       ariaLabel: "Visit my Strava",
       label: "Strava",
     }

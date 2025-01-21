@@ -19,11 +19,13 @@ function Footer() {
 
             <Wrapper>
                 <div className="flex items-center justify-between px-1 py-4 text-sm text-neutral-500">
-                    <span>Salvador Villalon © {new Date().getFullYear()}</span>
+                    {/* <span>Salvador Villalon © {new Date().getFullYear()}</span> */}
+                    <span>Salvador Villalon © </span>
 
                     <div className="flex items-center">
                         <a
-                            href="/follow/github"
+                            // href="/follow/github"
+                            href=""
                             aria-label="Visit my GitHub"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
