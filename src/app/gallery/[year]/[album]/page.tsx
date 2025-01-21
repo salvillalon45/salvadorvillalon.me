@@ -7,10 +7,10 @@ import { Separator } from "~/app/_components/ui/separator";
 import { HeadingSize } from "~/lib/types";
 
 interface SlugProps {
-    params: {
+    params: Promise<{
         year: string;
         album: string;
-    }
+    }>;
 }
 
 // Generate all possible year/album combinations at build time
@@ -19,7 +19,6 @@ export async function generateStaticParams() {
 
     return gallery.map(({ year, albums }) => {
         return albums.map(({ slug }) => {
-            console.log({ year, slug })
             return {
                 year,
                 album: slug
@@ -28,9 +27,10 @@ export async function generateStaticParams() {
     });
 }
 
-function AlbumSlug({ params }: SlugProps) {
-    const gallery = fetchGallery().find(({ year }) => year === params.year)!
-    const { pictures, location, title, description } = gallery.albums.find(({ slug }) => slug === params.album)!
+async function AlbumSlug({ params }: SlugProps) {
+    const { year: paramsYear, album: paramsAlbum } = await params;
+    const gallery = fetchGallery().find(({ year }) => year === paramsYear)!
+    const { pictures, location, title, description } = gallery.albums.find(({ slug }) => slug === paramsAlbum)!
 
     return (
         <section className={`album-section my-12`}>
@@ -49,7 +49,7 @@ function AlbumSlug({ params }: SlugProps) {
                         <Separator />
 
                         <AnchorLink
-                            href={`/gallery/${params.year}/`}
+                            href={`/gallery/${paramsYear}/`}
                             text="Back"
                             className="max-w-fit bg-primary text-primary-foreground hover:bg-primary/90 flex items-center rounded-md px-3 py-2 transition-colors"
                         />

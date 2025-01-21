@@ -1,12 +1,13 @@
 "use client";
 
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 import { Menu } from "lucide-react";
 import Links from "./Links";
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
+    DialogTitle,
     DialogTrigger,
 } from "~/app/_components/ui/dialog"
 import { useEffect, useState, } from "react";
@@ -36,12 +37,15 @@ function MobileNav() {
                         <Menu />
                     </button>
                 </DialogTrigger >
-
                 <DialogContent>
                     <DialogHeader>
-                        <DialogDescription>
+                        <VisuallyHidden.Root asChild>
+                            <DialogTitle>Menu</DialogTitle>
+                        </VisuallyHidden.Root>
+
+                        <div>
                             <Links routes={inAppRoutesArray} isMobile onLinkClick={handleLinkClick} />
-                        </DialogDescription>
+                        </div>
                     </DialogHeader>
                 </DialogContent>
             </Dialog >

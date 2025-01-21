@@ -1,8 +1,9 @@
-import { type ExperiencesDataArray, HeadingSize, SectionLabel } from "~/lib/types";
+import { type ExperiencesDataArray, HeadingSize, type SectionLabel } from "~/lib/types";
 import Heading from "~/app/_components/Heading";
 import ExperienceItem from "./ExperienceItem";
 import { Separator } from "../_components/ui/separator";
 import AnchorLink from "../_components/AnchorLink";
+import { Fragment } from "react";
 
 interface ExperienceSectionProps {
     id: string;
@@ -21,7 +22,7 @@ function ExperienceSection({ id, heading, data }: ExperienceSectionProps) {
 
                 {data.map(({ organization, organization_link: orgLink, positions }, index) => {
                     return (
-                        <>
+                        <Fragment key={organization}>
                             <div>
                                 <p>
                                     <AnchorLink
@@ -58,7 +59,7 @@ function ExperienceSection({ id, heading, data }: ExperienceSectionProps) {
                                     <Separator className='mb-2 mt-2' />
                                 )
                             }
-                        </>
+                        </Fragment>
                     );
                 })}
             </div>

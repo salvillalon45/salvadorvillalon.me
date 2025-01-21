@@ -9,7 +9,9 @@ import { formatDate, getBlogPosts } from "~/lib/blog";
 import { Separator } from "~/app/_components/ui/separator";
 
 interface SlugProps {
-    params: { slug: string; }
+    params: Promise<{
+        slug: string;
+    }>
 }
 
 export async function generateStaticParams() {
@@ -20,8 +22,10 @@ export async function generateStaticParams() {
     }))
 }
 
-export function generateMetadata({ params }: SlugProps) {
-    const post = getBlogPosts().find((post) => post.slug === params.slug)
+export async function generateMetadata({ params }: SlugProps) {
+    const { slug } = await params;
+
+    const post = getBlogPosts().find((post) => post.slug === slug)
     if (!post) {
         return
     }
@@ -60,8 +64,10 @@ export function generateMetadata({ params }: SlugProps) {
     }
 }
 
-export default function BlogSlug({ params }: SlugProps) {
-    const post = getBlogPosts().find((post) => post.slug === params.slug)
+export default async function BlogSlug({ params }: SlugProps) {
+    const { slug } = await params;
+
+    const post = getBlogPosts().find((post) => post.slug === slug)
 
 
     if (!post) {

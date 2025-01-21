@@ -2,13 +2,7 @@
 
 import { History } from 'lucide-react';
 import Wrapper from "../Wrapper";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTrigger,
-} from "~/app/_components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger, } from "~/app/_components/ui/dialog"
 import { externalRoutesArray } from '~/lib/routes';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import AnchorLink from '../AnchorLink';
@@ -27,6 +21,8 @@ function Footer() {
                             href="/follow/github"
                             target="_blank"
                             aria-label="Visit my GitHub"
+                            target='_blank'
+                            rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
                             <svg
@@ -47,6 +43,8 @@ function Footer() {
                             href="/follow/linkedin"
                             target="_blank"
                             aria-label="Visit my LinkedIn"
+                            target='_blank'
+                            rel="noreferrer"
                             className="p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300"
                         >
                             <svg

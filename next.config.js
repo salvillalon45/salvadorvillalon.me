@@ -1,53 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
  * for Docker builds.
  */
 await import("./src/env.js");
 
-// // const { withPlaiceholder } = require("@plaiceholder/next");
-// import withPlaiceholder from "@plaiceholder/next";
-// import withPWA from "next-pwa";
-
-// const withPWAConfig = withPWA({
-//   dest: "public",
-//   disable: process.env.NODE_ENV === "development",
-// });
-
-// withPWAConfig(
-//   withPlaiceholder({
-//     redirects: async () => [
-//       {
-//         source: "/opensource",
-//         destination: "/projects",
-//         permanent: true,
-//       },
-//       {
-//         source: "/follow/linkedin",
-//         destination: "https://www.linkedin.com/in/crloscuesta",
-//         permanent: true,
-//       },
-//       {
-//         source: "/follow/x",
-//         destination: "https://twitter.com/crloscuesta",
-//         permanent: true,
-//       },
-//       {
-//         source: "/follow/github",
-//         destination: "https://github.com/carloscuesta",
-//         permanent: true,
-//       },
-//     ],
-//   }),
-// );
-
-// /** @type {import("next").NextConfig} */
-// const config = {};
-
-// export default config;
 import withPlaiceholder from "@plaiceholder/next";
-import withPWA from "next-pwa";
 import createMDX from '@next/mdx'
 
 const cspHeader = `
@@ -64,28 +21,11 @@ const cspHeader = `
     ${process.env.NODE_ENV === "development" ? "" : "upgrade-insecure-requests"};
 `;
 
-const plaiceholderConfig = withPlaiceholder({
-  experimental: {
-    // https://beta.nextjs.org/docs/api-reference/next-config#servercomponentsexternalpackages
-    serverComponentsExternalPackages: ["uglify-js", "plaiceholder"],
-  },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/carloscuesta/image/upload/**",
-      },
-    ],
-    deviceSizes: [640, 768, 1024, 1280, 1536],
-  },
+// MXD Configuration
+const nextConfig = {
+  // Configure `pageExtensions` to include markdown and MDX files
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   redirects: async () => [
-    {
-      source: "/opensource",
-      destination: "/projects",
-      permanent: true,
-    },
     {
       source: "/follow/linkedin",
       destination: "https://www.linkedin.com/in/salvadorvillalon",
@@ -126,28 +66,16 @@ const plaiceholderConfig = withPlaiceholder({
       ],
     },
   ],
-});
-
-const pwaConfig = withPWA({
-  disable: process.env.NODE_ENV === "development",
-  dest: "public",
-});
-
-
-// MXD Configuration
-const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 }
 
 const withMDX = createMDX({})
 const mdxConfig = withMDX(nextConfig)
+const result = withPlaiceholder(mdxConfig);
 
+// TODO: Learn how to use withPlaiceholder and withPWA
 /** @type {import("next").NextConfig} */
 const config = {
-  ...plaiceholderConfig,
-  ...pwaConfig,
-  ...mdxConfig
+  ...result,
 };
 
 export default config;

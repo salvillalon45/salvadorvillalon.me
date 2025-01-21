@@ -12,9 +12,9 @@ import '../../../styles/AboutSalPost.css';
 import { Card, CardContent, CardFooter } from "~/app/_components/ui/card";
 
 interface SlugProps {
-    params: {
+    params: Promise<{
         year: string;
-    };
+    }>;
 }
 
 export async function generateStaticParams() {
@@ -23,8 +23,10 @@ export async function generateStaticParams() {
     }));
 }
 
-export function generateMetadata({ params }: SlugProps) {
-    const gallery = fetchGallery().find((gal) => gal.year === params.year)
+export async function generateMetadata({ params }: SlugProps) {
+    const { year } = await params;
+
+    const gallery = fetchGallery().find((gal) => gal.year === year)
 
     if (!gallery) {
         return
@@ -33,20 +35,20 @@ export function generateMetadata({ params }: SlugProps) {
     const description = 'testing galle ry'
 
     const {
-        year,
+        year: galleryYear,
         // publishedAt: publishedTime,
         // image,
     } = gallery
 
     return {
-        title: year,
+        title: galleryYear,
         description,
         openGraph: {
-            title: year,
+            title: galleryYear,
             description,
             type: 'article',
             // publishedTime,
-            url: `${baseUrl}/blog/${year}`,
+            url: `${baseUrl}/blog/${galleryYear}`,
             images: [
                 {
                     // url: ogImage,
@@ -62,17 +64,19 @@ export function generateMetadata({ params }: SlugProps) {
     }
 }
 
-export default function YearSlug({ params }: SlugProps) {
-    const gallery = fetchGallery().find((gal) => gal.year === params.year)
+export default async function YearSlug({ params }: SlugProps) {
+    const { year } = await params;
+
+    const gallery = fetchGallery().find((gal) => gal.year === year)
 
     if (!gallery) {
         notFound()
     }
 
-    const { year, albums } = gallery
+    const { year: galleryYear, albums } = gallery
 
     return (
-        <section className={`gallery-${year}-section my-12`}>
+        <section className={`gallery-${galleryYear}-section my-12`}>
             <Wrapper>
                 <script
                     type="application/ld+json"
@@ -88,7 +92,7 @@ export default function YearSlug({ params }: SlugProps) {
                             // image: post.metadata.image
                             //     ? `${baseUrl}${post.metadata.image}`
                             //     : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-                            url: `${baseUrl}/gallery/${year}`,
+                            url: `${baseUrl}/gallery/${galleryYear}`,
                             author: {
                                 '@type': 'Salvador Villalon',
                                 name: 'My Portfolio',
@@ -100,10 +104,10 @@ export default function YearSlug({ params }: SlugProps) {
                 <div className="grid gap-12">
                     <div className='grid gap-4'>
                         <Heading
-                            text={`Gallery ${year}`}
+                            text={`Gallery ${galleryYear}`}
                             size={HeadingSize.H1}
                         />
-                        <p>The Adventures in {year}. Click on a picture to see the gallery.</p>
+                        <p>The Adventures in {galleryYear}. Click on a picture to see the gallery.</p>
                         <Separator />
                         <AnchorLink
                             href={`/gallery`}
@@ -115,9 +119,9 @@ export default function YearSlug({ params }: SlugProps) {
                     <article className='grid gap-20 grid-cols-1 md:grid-cols-3 m-auto'>
                         {albums.map(({ pictures, title, slug }) => {
                             const { src, alt, } = pictures[0]!
-                            console.log(pictures[0])
+
                             return (
-                                <a key={title} href={`/gallery/${year}/${slug}`}>
+                                <a key={title} href={`/gallery/${galleryYear}/${slug}`}>
                                     <Card className="overflow-hidden w-64 hover:scale-[1.02] transition-transform duration-200">
                                         <CardContent className="p-0 h-64 relative">
                                             <Image
