@@ -19,7 +19,7 @@ In the portfolio, you will find the following pages:
 This portfolio is inspired by [Carlos Cuesta](https://carloscuesta.me/).
 
 ## Previous Versions
-Portfolio Version 1 - Link: http://salvador-villalon.appspot.com/ (App is down)
-Portfolio Version 2 - Link: [https://salvillalon45.github.io/](https://salvillalon45.github.io/)
-Portfolio Version 3 - [Finished but never deployed](https://github.com/salvillalon45/portfolio-version-3)
-Portfolio Version 4 - Link: [https://salvador-villalon.netlify.app/](https://salvador-villalon.netlify.app/)
+- Portfolio Version 1 - Link: http://salvador-villalon.appspot.com/ (App is down)
+- Portfolio Version 2 - Link: [https://salvillalon45.github.io/](https://salvillalon45.github.io/)
+- Portfolio Version 3 - [Finished but never deployed](https://github.com/salvillalon45/portfolio-version-3)
+- Portfolio Version 4 - Link: [https://salvador-villalon.netlify.app/](https://salvador-villalon.netlify.app/)
