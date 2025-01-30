@@ -1,7 +1,7 @@
 import AboutPage from "./AboutPage";
-import { type Metadata } from 'next';
+// import { type Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'About' };
+// export const metadata: Metadata = { title: 'About' };
 
 function About() {
   return (
