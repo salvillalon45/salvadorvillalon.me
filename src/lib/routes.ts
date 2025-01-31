@@ -1,5 +1,7 @@
 import { RoutesLabels, RoutesValues } from "./types";
 
+export const base = 'https://salvador-villalon.vercel.app/'
+
 export const inAppRoutes = {
     [RoutesLabels.HOME]: RoutesValues.HOME,
     [RoutesLabels.NOW]: RoutesValues.NOW,

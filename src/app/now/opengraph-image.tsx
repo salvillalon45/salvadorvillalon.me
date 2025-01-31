@@ -7,9 +7,9 @@ export const size = opengraphSize;
 export const contentType = opengraphContentType;
 
 export default async function Image() {
-    const title = 'About';
-    const description = 'Software Engineer based in Calexico, that loves to code and make the world a better place.';
-    const url = 'about';
+    const title = 'Now with Sal';
+    const description = 'What is Sal currently doing?';
+    const url = 'now';
 
     const fonts = await getFonts()
 

@@ -7,6 +7,7 @@ import { TRPCReactProvider } from "~/trpc/react";
 
 import { cn } from "~/lib/cn";
 import PageLayout from "./_components/Layout/PageLayout";
+import { base } from "~/lib/routes";
 
 export const metadata: Metadata = {
   title: {
@@ -14,19 +15,20 @@ export const metadata: Metadata = {
     template: "Salvador Villalon – %s",
   },
   description:
-    "I'm a Full - Stack Engineer based in SoCal, that loves to code and " +
-    "build products with a delightful user experience." +
-    "I love working in between product, engineering and developer experience.",
-  metadataBase: new URL("https://salvador-villalon.vercel.app/"),
+    "I'm a Full - Stack Engineer based in Calexico, that loves to code and " +
+    "and make the world a better place." +
+    "I love using my skills to create products that help others.",
+  metadataBase: new URL(base),
   openGraph: {
     type: "website",
     locale: "en-US",
     siteName: "Salvador Villalon",
-    url: "https://salvador-villalon.vercel.app/",
+    url: base,
   },
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+// TODO: Learn what is LocalFont and how it works
 const font = localFont({
   src: [
     {

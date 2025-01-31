@@ -20,7 +20,7 @@ export function fetchBlogs() {
             publishedAt: '2023',
             title: 'How Sal Got in Tech',
             link: '',
-            slug: 'about-sal'
+            slug: 'how-sal-got-in-tech'
         },
         {
             publishedAt: '2024',
